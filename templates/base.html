@@ -5,26 +5,55 @@
 
 <head>
    
+    {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here" />
+    {% endblock %}
 
+    {% block extrameta %}
+    {% endblock %}
+
+    {% block corecss %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    {% endblock %}
 
+    {% block extracss %}
+    {% endblock %}
+
+    {% block corejs %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    {% endblock %}
 
-    <title>nuTROLLA</title>
+    {% block extrajs %}
+    {% endblock %}
+    
+    <title>nuTROLLA {% block extra_title %}{% endblock %}</title>
 
 </head>
 
 <body>
 
+    <header class="container-fluid fixed-top"></header>
     
+    {% if messages %}
+    <div class="message-container"></div>
+    {% endif %}
+
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block postload_js %}
+    {% endblock %}
+
 </body>
 
 </html>
