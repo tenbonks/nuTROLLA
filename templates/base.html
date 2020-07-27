@@ -19,6 +19,8 @@
     {% block corecss %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extracss %}
@@ -40,11 +42,11 @@
 <body>
 
     <header class="container-fluid fixed-top">
-        <div class="row">
+        <div id="topnav" class="row bg-dark-pri pt-lg-2 d-none d-lg-flex">
             
             <div class="col-12 col-lg-4 my-auto py-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0">
+                    <h2 class="logo-font text-magenta my-0">
                         nu<strong>TROLLA</strong>
                     </h2>
                 </a>
@@ -53,10 +55,10 @@
             <div class="col-12 col-lg-4 my-auto py-auto py-1 py-lg-0">
                 <form action="GET" action="">
                     <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q"
+                        <input class="form-control border border-purple rounded-0" type="text" name="q"
                             placeholder="Search Our Store">
                         <div class="inout-group-append">
-                            <button class="form-control btn-purple border border-black rounded-0" type="submit">
+                            <button class="form-control btn-purple border border-purple rounded-0" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>

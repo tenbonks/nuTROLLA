@@ -1,0 +1,114 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/homepage-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: blueviolet;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Background colours */
+
+.bg-dark-pri {
+    background: #241734;
+}
+
+.bg-dark-sec {
+    background: #2E2157;
+}
+/* From Bulma, keeps icons aligned and sized consistently */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* Link/Btn Styles */
+.main-logo-link {
+    width: fit-content;
+}
+
+.home-shop-button {
+    background: linear-gradient(#920075, #000);
+    color:white;
+}
+
+.btn-purple {
+    background: #791E94;
+    color: white;
+}
+
+
+.home-shop-button:hover,
+.home-shop-button:active,
+.home-shop-button:focus {
+    background: linear-gradient(#000, #920075);
+}
+
+.btn-purple:hover,
+.btn-purple:active,
+.btn-purple:focus {
+    background: #540D6E;
+    color: white;
+}
+
+.border-purple {
+    border: 1px #791E94 !important
+}
+
+/* Text Styles */
+.text-purple {
+    color: #791E94 !important;
+}
+
+.text-purple-sec {
+    color: #541388 !important;
+}
+
+.text-purple-ter {
+    color: #540D6E !important;
+}
+
+.text-magenta {
+    color: #F6019D !important;
+}
+
+.text-magenta-sec {
+    color: #D40078 !important;
+}
+
+.text-magenta-ter {
+    color: #920075 !important;
+}
+
+.text-cyan {
+   color: #3DE2E6 !important; 
+}
+
+/* MEDIA QUERIES - Code copied from Code Insitute, learning material */
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+  
+  /* fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
+      .fixed-top-desktop-only {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1030;
+      }
+  
+      .header-container {
+          padding-top: 164px;
+      }
+  }
