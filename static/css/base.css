@@ -10,8 +10,11 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
-/* Background colours */
+a {
+    text-decoration: none !important;
+}
 
+/* Background colours */
 .bg-dark-pri {
     background: #241734;
 }
@@ -19,6 +22,7 @@ body {
 .bg-dark-sec {
     background: #2E2157;
 }
+
 /* From Bulma, keeps icons aligned and sized consistently */
 .icon {
     align-items: center;
@@ -33,28 +37,32 @@ body {
     width: fit-content;
 }
 
-.home-shop-button {
-    background: linear-gradient(#920075, #000);
-    color:white;
-}
-
 .btn-purple {
-    background: #791E94;
-    color: white;
+    color: #fff;
+    background-color: #791E94;
+    border-color: #791E94;
 }
 
-
-.home-shop-button:hover,
-.home-shop-button:active,
-.home-shop-button:focus {
-    background: linear-gradient(#000, #920075);
+.big-shop-btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 5rem 5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 40% 0;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .btn-purple:hover,
 .btn-purple:active,
 .btn-purple:focus {
-    background: #540D6E;
-    color: white;
+    color: #fff;
+    background-color: #540D6E;
+    border-color: #F6019D;
 }
 
 .border-purple {
@@ -87,28 +95,28 @@ body {
 }
 
 .text-cyan {
-   color: #3DE2E6 !important; 
+    color: #3DE2E6 !important;
 }
 
 /* MEDIA QUERIES - Code copied from Code Insitute, learning material */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
-      max-width: 80%;
+        max-width: 80%;
     }
-  }
-  
-  /* fixed top navbar only on medium and up */
-  @media (min-width: 992px) {
-      .fixed-top-desktop-only {
-          position: fixed;
-          top: 0;
-          right: 0;
-          left: 0;
-          z-index: 1030;
-      }
-  
-      .header-container {
-          padding-top: 164px;
-      }
-  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
