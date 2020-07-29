@@ -46,7 +46,7 @@
             
             <div class="col-12 col-lg-4 my-auto py-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font  my-0">
+                    <h2 class="my-0">
                         nu<strong>TROLLA</strong>
                     </h2>
                 </a>
@@ -112,7 +112,8 @@
 
         <div class="row bg-dark-sec">
             <nav class="navbar navbar-expand-lg navbar-dark w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" 
+                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}
@@ -130,11 +131,78 @@
     <div class="message-container"></div>
     {% endif %}
 
+    
+
     {% block page_header %}
     {% endblock %}
 
     {% block content %}
     {% endblock %}
+
+    <!-- Footer, this whole footer is adapted from https://mdbootstrap.com/docs/jquery/navigation/footer/ -->
+<footer class="page-footer font-small bg-dark-pri pt-4 text-magenta">
+
+    <div class="container-fluid text-center text-md-left">
+      <div class="row">
+  
+        <div class="col-md-6 mt-md-0 mt-3">
+  
+          <h5 class="text-uppercase">About Us</h5>
+          <p>nuTROLLA specializes in refurbishment of Video Game Controllers, 
+              our aim is to get these controllers back into use and 
+              reduce electronical waste on our planet.</p>
+        </div>
+        
+        <hr class="clearfix w-100 d-md-none pb-3">
+  
+        <div class="col-md-3 mb-md-0 mb-3">
+  
+          <h5 class="text-uppercase">Information</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Returns</a>
+            </li>
+            <li>
+              <a href="#!">T&amp;C's</a>
+            </li>
+            <li>
+              <a href="#!">Repairs</a>
+            </li>
+            <li>
+              <a href="#!">Contact Us</a>
+            </li>
+          </ul>
+  
+        </div>
+        <div class="col-md-3 mb-md-0 mb-3">
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+      
+    </div>
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://github.com/tenbonks" target="blank"> TenBonks</a>
+    </div>
+    
+  </footer>
+  <!-- Footer -->
 
     {% block postload_js %}
     {% endblock %}

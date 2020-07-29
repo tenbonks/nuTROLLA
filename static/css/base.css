@@ -84,7 +84,8 @@ a {
 }
 
 nav a,
-header a {
+header a,
+footer a {
     color: #F6019D !important;
 }
 
@@ -96,7 +97,8 @@ header a {
     background-color: #241734;
 }
 nav a:hover,
-header a:hover {
+header a:hover,
+footer a:hover {
     color: #920075 !important;
 }
 
@@ -113,7 +115,7 @@ header a:hover {
     vertical-align: middle;
     user-select: none;
     border: 1px solid transparent;
-    padding: 5rem 5rem;
+    padding: 15% 20%;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 40% 0;
