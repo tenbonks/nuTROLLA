@@ -68,6 +68,13 @@ a {
     background: #540D6E;
 }
 
+.bg-opaque {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    width: fit-content;
+    border-radius: 1rem;
+}
+
 
 /* From Bulma, keeps icons aligned and sized consistently */
 .icon {
@@ -96,6 +103,7 @@ footer a {
 .dropdown-menu:hover a {
     background-color: #241734;
 }
+
 nav a:hover,
 header a:hover,
 footer a:hover {
@@ -119,7 +127,11 @@ footer a:hover {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 40% 0;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, border-radius .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.big-shop-btn:hover {
+    border-radius: 0 40%;
 }
 
 .btn-purple:hover,
