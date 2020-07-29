@@ -6,7 +6,7 @@ body {
     background: url('/media/vaporwave-bg.png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: blueviolet;
+    color: black;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -14,9 +14,17 @@ a {
     text-decoration: none !important;
 }
 
+.h-90 {
+    height: 90% !important;
+}
+
+.callout-container {
+    padding-bottom: 3rem;
+}
+
+/* Special effects */
 .neon-glow {
-    background: linear-gradient(#F6019D, rgba(255, 255, 255, 0));
-    
+    background: linear-gradient(#F6019D, rgba(255, 255, 255, 0));   
 }
 
 .neon-banner {
@@ -25,6 +33,20 @@ a {
     width:100%;
     padding: 0;
 }
+
+.neon-banner-inv {
+    background: linear-gradient(rgba(255, 255, 255, 0), #F6019D);
+    height: 3rem;
+    width:100%;
+    padding: 0;
+}
+
+.callout-card {
+    max-width: 70%;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
 /* Background colours */
 .bg-dark-pri {
     background: #241734;
@@ -33,6 +55,19 @@ a {
 .bg-dark-sec {
     background: #2E2157;
 }
+
+.bg-purple {
+    background: #791E94;
+}
+
+.bg-purple-sec {
+    background: #541388;
+}
+
+.bg-purple-ter {
+    background: #540D6E;
+}
+
 
 /* From Bulma, keeps icons aligned and sized consistently */
 .icon {
