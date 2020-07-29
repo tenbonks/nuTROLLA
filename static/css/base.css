@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/homepage-bg.jpg') no-repeat center center fixed;
+    background: url('/media/vaporwave-bg.png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: blueviolet;
@@ -14,6 +14,17 @@ a {
     text-decoration: none !important;
 }
 
+.neon-glow {
+    background: linear-gradient(#F6019D, rgba(255, 255, 255, 0));
+    
+}
+
+.neon-banner {
+    background: linear-gradient(#F6019D, rgba(255, 255, 255, 0));
+    height: 3rem;
+    width:100%;
+    padding: 0;
+}
 /* Background colours */
 .bg-dark-pri {
     background: #241734;
@@ -35,6 +46,23 @@ a {
 /* Link/Btn Styles */
 .main-logo-link {
     width: fit-content;
+}
+
+nav a,
+header a {
+    color: #F6019D !important;
+}
+
+.dropdown-menu {
+    background-color: #241734;
+}
+
+.dropdown-menu:hover a {
+    background-color: #241734;
+}
+nav a:hover,
+header a:hover {
+    color: #920075 !important;
 }
 
 .btn-purple {
@@ -70,6 +98,10 @@ a {
 }
 
 /* Text Styles */
+.logo-font {
+    text-transform: uppercase;
+}
+
 .text-purple {
     color: #791E94 !important;
 }
