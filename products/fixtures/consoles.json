@@ -1,0 +1,17 @@
+[
+    {"pk": 1, "model": "products.console", "fields": {"manufacturer": 1, "name": "playstation_1", "friendly_name": "Playstation 1"}},
+    {"pk": 2, "model": "products.console", "fields": {"manufacturer": 1, "name": "playstation_2", "friendly_name": "Playstation 2"}},
+    {"pk": 3, "model": "products.console", "fields": {"manufacturer": 1, "name": "playstation_3", "friendly_name": "Playstation 3"}},
+    {"pk": 4, "model": "products.console", "fields": {"manufacturer": 1, "name": "playstation_4", "friendly_name": "Playstation 4"}},
+    {"pk": 5, "model": "products.console", "fields": {"manufacturer": 2, "name": "xbox_original", "friendly_name": "XBOX"}},
+    {"pk": 6, "model": "products.console", "fields": {"manufacturer": 2,"name": "xbox_360", "friendly_name": "XBOX 360"}},
+    {"pk": 7, "model": "products.console", "fields": {"manufacturer": 2,"name": "xbox_one", "friendly_name": "XBOX One"}},
+    {"pk": 8, "model": "products.console", "fields": {"manufacturer": 3,"name": "nintendo_64", "friendly_name": "Nintendo 64"}},
+    {"pk": 9, "model": "products.console", "fields": {"manufacturer": 3,"name": "gamecube", "friendly_name": "Gamecube"}},
+    {"pk": 10, "model": "products.console", "fields": {"manufacturer": 3,"name": "nes", "friendly_name": "NES"}},
+    {"pk": 11, "model": "products.console", "fields": {"manufacturer": 3,"name": "snes", "friendly_name": "SNES"}},
+    {"pk": 12, "model": "products.console", "fields": {"manufacturer": 3,"name": "switch", "friendly_name": "Switch"}},
+    {"pk": 13, "model": "products.console", "fields": {"manufacturer": 4,"name": "saturn", "friendly_name": "Saturn"}},
+    {"pk": 14, "model": "products.console", "fields": {"manufacturer": 4,"name": "megadrive", "friendly_name": "MegaDrive"}},
+    {"pk": 15, "model": "products.console", "fields": {"manufacturer": 4,"name": "dreamcast", "friendly_name": "Dreamcast"}}
+]

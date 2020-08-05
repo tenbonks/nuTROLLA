@@ -1,0 +1,6 @@
+ [
+    {"pk": 1, "model": "products.manufacturer", "fields": {"name": "sony", "friendly_name": "Sony"}},
+    {"pk": 2, "model": "products.manufacturer", "fields": {"name": "microsoft", "friendly_name": "Microsoft"}},
+    {"pk": 3, "model": "products.manufacturer", "fields": {"name": "nintendo", "friendly_name": "Nintendo"}},
+    {"pk": 4, "model": "products.manufacturer", "fields": {"name": "sega", "friendly_name": "SEGA"}}
+]
