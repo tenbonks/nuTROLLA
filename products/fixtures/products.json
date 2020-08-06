@@ -1,392 +1,547 @@
-[
-    {"pk": 1, "model": "products.product", "fields": 
-        {"sku": "PS1-CONT-NDS-GRA",
-         "name": "PS1 - Grey, Non-Dualshock", 
-         "description": "The original Playstation 1 controller in grey, No Dualshock model",
-         "price": 15.99,
-         "category": 1,
-         "console": 1,
-         "image_url": "",
-         "image": "ps1_control_gray_og.png",
-         "stock" : 23}},
-    {"pk": 2, "model": "products.product", "fields": 
-        {"sku": "PS1-CONT-DS-GRA",
-         "name": "PS1 - Grey, Dualshock", 
-         "description": "The Playstation 1 controller in grey, Dualshock, compatible with the Playstation 2",
-         "price": 18.99,
-         "category": 1,
-         "console": 1,
-         "image_url": "",
-         "image": "ps1_control_gray_ds.png",
-         "stock" : 19}},
-    {"pk": 3, "model": "products.product", "fields": 
-        {"sku": "PS1-CONT-DS-TGR",
-         "name": "PS1 Transparent Green, Dualshock", 
-         "description": "The Playstation 1 controller in transparent green, Dualshock, compatible with the Playstation 2",
-         "price": 18.99,
-         "category": 1,
-         "console": 1,
-         "image_url": "",
-         "image": "ps1_control_tr-gre_ds.jpg",
-         "stock" : 30}},
-    {"pk": 4, "model": "products.product", "fields": 
-        {"sku": "PS2-CONT-DS-BLA",
-         "name": "PS2 - Black, Dualshock", 
-         "description": "The Playstation 2 controller in Black, Dualshock 2",
-         "price": 18.99,
-         "category": 1,
-         "console": 2,
-         "image_url": "",
-         "image": "",
-         "stock" : 28}},
-    {"pk": 5, "model": "products.product", "fields": 
-        {"sku": "PS3-CONT-DS-BLA",
-         "name": "PS3 - Black, Dualshock", 
-         "description": "The Playstation 3 controller in Black, features Dualshock and SixAxis for motion control",
-         "price": 19.99,
-         "category": 1,
-         "console": 3,
-         "image_url": "",
-         "image": "ps3_control_black.png",
-         "stock" : 28}},
-    {"pk": 6, "model": "products.product", "fields": 
-        {"sku": "PS3-CONT-DS-BLU",
-         "name": "PS3 Blue, Dualshock", 
-         "description": "The Playstation 3 controller in Blue, features Dualshock and SixAxis for motion control",
-         "price": 19.99,
-         "category": 1,
-         "console": 3,
-         "image_url": "",
-         "image": "ps3_control_blue.png",
-         "stock" : 28}},
-    {"pk": 7, "model": "products.product", "fields": 
-        {"sku": "PS4-CONT-DS-BLA-V1",
-         "name": "PS4 v1 - Black, Dualshock", 
-         "description": "The Playstation 4 controller in black, boasting Dualshock and motion control capabilities to immerse you into the game. This is the first version of the Playstation 4 controller",
-         "price": 23.99,
-         "category": 1,
-         "console": 4,
-         "image_url": "",
-         "image": "ps4_control_black_v1.png",
-         "stock" : 28}},
-    {"pk": 8, "model": "products.product", "fields": 
-        {"sku": "PS4-CONT-DS-BLU-V1",
-         "name": "PS4 v1 - Blue, Dualshock", 
-         "description": "The Playstation 4 controller in blue, boasting Dualshock and motion control capabilities to immerse you into the game. This is the first version of the Playstation 4 controller",
-         "price": 23.99,
-         "category": 1,
-         "console": 4,
-         "image_url": "",
-         "image": "ps4_control_blue_v1.png",
-         "stock" : 28}},
-    {"pk": 9, "model": "products.product", "fields": 
-        {"sku": "PS4-CONT-DS-BLU-V2",
-         "name": "PS4 v2 - Blue, Dualshock", 
-         "description": "The Playstation 4 controller in blue, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
-         "price": 24.99,
-         "category": 1,
-         "console": 4,
-         "image_url": "",
-         "image": "ps4_control_blue_v2.png",
-         "stock" : 28}},
-    {"pk": 10, "model": "products.product", "fields": 
-        {"sku": "PS4-CONT-DS-BRO-V1",
-         "name": "PS4 v1 - Bronze, Dualshock", 
-         "description": "The Playstation 4 controller in bronze, boasting Dualshock and motion control capabilities to immerse you into the game. This is the first version of the Playstation 4 controller",
-         "price": 23.99,
-         "category": 1,
-         "console": 4,
-         "image_url": "",
-         "image": "ps4_control_bronze_v1.png",
-         "stock" : 28}},
-    {"pk": 11, "model": "products.product", "fields": 
-        {"sku": "PS4-CONT-DS-CAM-BLU-V2",
-         "name": "PS4 v2 - Camo Blue, Dualshock", 
-         "description": "The Playstation 4 controller in blue and camoflauge styling, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
-         "price": 24.99,
-         "category": 1,
-         "console": 4,
-         "image_url": "",
-         "image": "ps4_control_camo-blue_v2.png",
-         "stock" : 28}},
-    {"pk": 12, "model": "products.product", "fields": 
-        {"sku": "PS4-CONT-DS-CAM-GRN-V2",
-         "name": "PS4 v2 - Camo Green, Dualshock", 
-         "description": "The Playstation 4 controller in green and camoflauge styling, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
-         "price": 24.99,
-         "category": 1,
-         "console": 4,
-         "image_url": "",
-         "image": "ps4_control_camo-gre_v2.png",
-         "stock" : 28}},
-    {"pk": 13, "model": "products.product", "fields": 
-        {"sku": "PS4-CONT-DS-SLV-V2",
-         "name": "PS4 v2 - Silver, Dualshock", 
-         "description": "The Playstation 4 controller in silver, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
-         "price": 24.99,
-         "category": 1,
-         "console": 4,
-         "image_url": "",
-         "image": "ps4_control_silver_v2.png",
-         "stock" : 28}},
-    {"pk": 14, "model": "products.product", "fields": 
-        {"sku": "PS4-CONT-DS-STL-V2",
-         "name": "PS4 v2 - Steel, Dualshock", 
-         "description": "The Playstation 4 controller in Steel, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
-         "price": 24.99,
-         "category": 1,
-         "console": 4,
-         "image_url": "",
-         "image": "ps4_control_steel_v2.png",
-         "stock" : 28}},
-    {"pk": 15, "model": "products.product", "fields": 
-        {"sku": "PS4-CONT-DS-SUNSET-V2",
-         "name": "PS4 v2 - Sunset, Dualshock", 
-         "description": "The Playstation 4 controller in eye-catching sunset, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
-         "price": 24.99,
-         "category": 1,
-         "console": 4,
-         "image_url": "",
-         "image": "ps4_control_sunset_v2.png",
-         "stock" : 28}},
-    {"pk": 16, "model": "products.product", "fields": 
-        {"sku": "PS4-CONT-DS-TRA-RED-V2",
-         "name": "PS4 v2 - Transparent Red, Dualshock", 
-         "description": "The Playstation 4 controller in transparent red, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
-         "price": 24.99,
-         "category": 1,
-         "console": 4,
-         "image_url": "",
-         "image": "ps4_control_tr-red_v2.png",
-         "stock" : 28}},
-    {"pk": 17, "model": "products.product", "fields": 
-        {"sku": "PS4-CONT-DS-TRA-V2",
-         "name": "PS4 v2 - Transparent, Dualshock", 
-         "description": "The Playstation 4 controller in transparent, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
-         "price": 24.99,
-         "category": 1,
-         "console": 4,
-         "image_url": "",
-         "image": "ps4_control_tramp_v2.png",
-         "stock" : 1000}},
-    {"pk": 18, "model": "products.product", "fields": 
-        {"sku": "PS4-CONT-DS-WHT-V1",
-         "name": "PS4 v1 - White, Dualshock", 
-         "description": "The Playstation 4 controller in white, boasting Dualshock and motion control capabilities to immerse you into the game. This is the first version of the Playstation 4 controller",
-         "price": 24.99,
-         "category": 1,
-         "console": 4,
-         "image_url": "",
-         "image": "ps4_control_white_v1.png",
-         "stock" : 1000}},
-    {"pk": 19, "model": "products.product", "fields": 
-        {"sku": "DRMCST-CONT-GRAY",
-         "name": "DreamCast Controller", 
-         "description": "",
-         "price": 19.99,
-         "category": 1,
-         "console": 15,
-         "image_url": "",
-         "image": "dreamcast-con-gray.png",
-         "stock" : 1000}},
-    {"pk": 20, "model": "products.product", "fields": 
-        {"sku": "GAMCUB-CONT-BLA",
-         "name": "GameCube Controller (Black)", 
-         "description": "",
-         "price": 19.99,
-         "category": 1,
-         "console": 9,
-         "image_url": "",
-         "image": "gamecube_con_black.jpg",
-         "stock" : 1000}},
-    {"pk": 21, "model": "products.product", "fields": 
-        {"sku": "GAMCUB-CONT-PUR",
-         "name": "GameCube Controller (purple)", 
-         "description": "",
-         "price": 19.99,
-         "category": 1,
-         "console": 9,
-         "image_url": "",
-         "image": "gamecube_con_purple.jpg",
-         "stock" : 1000}},
-    {"pk": 22, "model": "products.product", "fields": 
-        {"sku": "MEGDRI-CONT-6B-BLA",
-         "name": "Megadrive 6-Button Controller", 
-         "description": "Sega Megadrive controller, The console is known as the \"Sega Genesis\" in North America",
-         "price": 19.99,
-         "category": 1,
-         "console": 14,
-         "image_url": "",
-         "image": "megadrive_con_6btn_black.jpg",
-         "stock" : 1000}},
-    {"pk": 23, "model": "products.product", "fields": 
-        {"sku": "N64-CONT-GRA",
-         "name": "N64 Controller (Gray)", 
-         "description": "",
-         "price": 18.99,
-         "category": 1,
-         "console": 8,
-         "image_url": "",
-         "image": "n64_con_gray.png",
-         "stock" : 1000}},
-    {"pk": 24, "model": "products.product", "fields": 
-        {"sku": "NES-CONT-ADV",
-         "name": "NES ADVANTAGE CONTROLLER", 
-         "description": "Get an adavantage with the NES ADVANTAGE controller",
-         "price": 25.99,
-         "category": 1,
-         "console": 10,
-         "image_url": "",
-         "image": "nes_advantage.png",
-         "stock" : 1000}},
-    {"pk": 25, "model": "products.product", "fields": 
-        {"sku": "NES-CONT",
-         "name": "NES Controller", 
-         "description": "",
-         "price": 15.99,
-         "category": 1,
-         "console": 10,
-         "image_url": "",
-         "image": "nes_con.png",
-         "stock" : 1000}},
-    {"pk": 26, "model": "products.product", "fields": 
-        {"sku": "SNES-CONT-GRAY",
-         "name": "SNES Controller (Gray)", 
-         "description": "",
-         "price": 17.99,
-         "category": 1,
-         "console": 11,
-         "image_url": "",
-         "image": "snes_con_gr.png",
-         "stock" : 1000}},
-    {"pk": 27, "model": "products.product", "fields": 
-        {"sku": "SWTC-CONT-PRO",
-         "name": "Switch Pro Controller", 
-         "description": "",
-         "price": 26.99,
-         "category": 1,
-         "console": 12,
-         "image_url": "",
-         "image": "switch_con_pro_tr-gra.jpg",
-         "stock" : 1000}},
-    {"pk": 28, "model": "products.product", "fields": 
-        {"sku": "XBOX-DUKE",
-         "name": "XBOX - The Duke", 
-         "description": "",
-         "price": 18.99,
-         "category": 1,
-         "console": 5,
-         "image_url": "",
-         "image": "xbox_the-duke.png",
-         "stock" : 1000}},
-    {"pk": 29, "model": "products.product", "fields": 
-        {"sku": "XBX360-CONT-BLA",
-         "name": "XBOX 360 Controller (Black)", 
-         "description": "",
-         "price": 18.99,
-         "category": 1,
-         "console": 6,
-         "image_url": "",
-         "image": "xbox360-con-black.png",
-         "stock" : 1000}},
-    {"pk": 30, "model": "products.product", "fields": 
-        {"sku": "XBX360-CONT-WHT",
-         "name": "XBOX 360 Controller (White)", 
-         "description": "",
-         "price": 18.99,
-         "category": 1,
-         "console": 6,
-         "image_url": "",
-         "image": "xbox360-con-white.png",
-         "stock" : 1000}},
-    {"pk": 31, "model": "products.product", "fields": 
-        {"sku": "XBXONE-CONT-BLA",
-         "name": "XBOX One Controller (Black)", 
-         "description": "",
-         "price": 24.99,
-         "category": 1,
-         "console": 7,
-         "image_url": "",
-         "image": "xboxone_control_black.png",
-         "stock" : 1000}},
-    {"pk": 32, "model": "products.product", "fields": 
-        {"sku": "XBXONE-CONT-ELT-WHT",
-         "name": "XBOX One Controller Elite (White)", 
-         "description": "",
-         "price": 34.99,
-         "category": 1,
-         "console": 7,
-         "image_url": "",
-         "image": "xboxone_control_elite_white.png",
-         "stock" : 1000}},
-    {"pk": 33, "model": "products.product", "fields": 
-        {"sku": "XBXONE-CONT-RED",
-         "name": "XBOX One Controller (Red)", 
-         "description": "",
-         "price": 24.99,
-         "category": 1,
-         "console": 7,
-         "image_url": "",
-         "image": "xboxone_control_red.png",
-         "stock" : 1000}},
-    {"pk": 34, "model": "products.product", "fields": 
-        {"sku": "XBXONE-CONT-SPNGBOB",
-         "name": "XBOX One Controller (Spongebob)", 
-         "description": "Limited edition Spongebob Squarepants themed controller.",
-         "price": 24.99,
-         "category": 1,
-         "console": 7,
-         "image_url": "",
-         "image": "xboxone_control_spngbob.png",
-         "stock" : 1000}},
-    {"pk": 35, "model": "products.product", "fields": 
-        {"sku": "XBXONE-CONT-TEA",
-         "name": "XBOX One Controller (Teal)", 
-         "description": "",
-         "price": 24.99,
-         "category": 1,
-         "console": 7,
-         "image_url": "",
-         "image": "xboxone_control_teal.png",
-         "stock" : 1000}},
-    {"pk": 36, "model": "products.product", "fields": 
-        {"sku": "XBXONE-CONT-BT-WHT",
-         "name": "XBOX One Controller Bluetooth (White)", 
-         "description": "",
-         "price": 24.99,
-         "category": 1,
-         "console": 7,
-         "image_url": "",
-         "image": "xboxone_control_wht_bt.png",
-         "stock" : 1000}},
-    {"pk": 37, "model": "products.product", "fields": 
-        {"sku": "XBXONE-CONT-WHT-MARB",
-         "name": "XBOX One Controller (Marble White)", 
-         "description": "",
-         "price": 24.99,
-         "category": 1,
-         "console": 7,
-         "image_url": "",
-         "image": "xboxone_control_wht_marble.png",
-         "stock" : 1000}},
-    {"pk": 38, "model": "products.product", "fields": 
-        {"sku": "XBXONE-CONT-TEA",
-         "name": "XBOX One Controller Elite (White & Silver)", 
-         "description": "",
-         "price": 34.99,
-         "category": 1,
-         "console": 7,
-         "image_url": "",
-         "image": "xboxone_control_wht_silv.png",
-         "stock" : 1000}},
-    {"pk": 39, "model": "products.product", "fields": 
-        {"sku": "XBXONE-CONT-WIRED-WHT",
-         "name": "XBOX One Controller Wired (White)", 
-         "description": "",
-         "price": 22.99,
-         "category": 1,
-         "console": 7,
-         "image_url": "",
-         "image": "xboxone_control_wht_wire.png",
-         "stock" : 1000}}
-]
+[{
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS1-CONT-NDS-GRA",
+        "name": "PS1 - Grey, Non-Dualshock",
+        "description": "The original Playstation 1 controller in grey, No Dualshock model",
+        "price": 15.99,
+        "category": 1,
+        "console": 1,
+        "image_url": "",
+        "image": "ps1_control_gray_og.png",
+        "stock": 23
+    }
+}, {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS1-CONT-DS-GRA",
+        "name": "PS1 - Grey, Dualshock",
+        "description": "The Playstation 1 controller in grey, Dualshock, compatible with the Playstation 2",
+        "price": 18.99,
+        "category": 1,
+        "console": 1,
+        "image_url": "",
+        "image": "ps1_control_gray_ds.png",
+        "stock": 19
+    }
+}, {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS1-CONT-DS-TGR",
+        "name": "PS1 Transparent Green, Dualshock",
+        "description": "The Playstation 1 controller in transparent green, Dualshock, compatible with the Playstation 2",
+        "price": 18.99,
+        "category": 1,
+        "console": 1,
+        "image_url": "",
+        "image": "ps1_control_tr-gre_ds.jpg",
+        "stock": 30
+    }
+}, {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS2-CONT-DS-BLA",
+        "name": "PS2 - Black, Dualshock",
+        "description": "The Playstation 2 controller in Black, Dualshock 2",
+        "price": 18.99,
+        "category": 1,
+        "console": 2,
+        "image_url": "",
+        "image": "",
+        "stock": 28
+    }
+}, {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS3-CONT-DS-BLA",
+        "name": "PS3 - Black, Dualshock",
+        "description": "The Playstation 3 controller in Black, features Dualshock and SixAxis for motion control",
+        "price": 19.99,
+        "category": 1,
+        "console": 3,
+        "image_url": "",
+        "image": "ps3_control_black.png",
+        "stock": 28
+    }
+}, {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS3-CONT-DS-BLU",
+        "name": "PS3 Blue, Dualshock",
+        "description": "The Playstation 3 controller in Blue, features Dualshock and SixAxis for motion control",
+        "price": 19.99,
+        "category": 1,
+        "console": 3,
+        "image_url": "",
+        "image": "ps3_control_blue.png",
+        "stock": 28
+    }
+}, {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS4-CONT-DS-BLA-V1",
+        "name": "PS4 v1 - Black, Dualshock",
+        "description": "The Playstation 4 controller in black, boasting Dualshock and motion control capabilities to immerse you into the game. This is the first version of the Playstation 4 controller",
+        "price": 23.99,
+        "category": 1,
+        "console": 4,
+        "image_url": "",
+        "image": "ps4_control_black_v1.png",
+        "stock": 28
+    }
+}, {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS4-CONT-DS-BLU-V1",
+        "name": "PS4 v1 - Blue, Dualshock",
+        "description": "The Playstation 4 controller in blue, boasting Dualshock and motion control capabilities to immerse you into the game. This is the first version of the Playstation 4 controller",
+        "price": 23.99,
+        "category": 1,
+        "console": 4,
+        "image_url": "",
+        "image": "ps4_control_blue_v1.png",
+        "stock": 28
+    }
+}, {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS4-CONT-DS-BLU-V2",
+        "name": "PS4 v2 - Blue, Dualshock",
+        "description": "The Playstation 4 controller in blue, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
+        "price": 24.99,
+        "category": 1,
+        "console": 4,
+        "image_url": "",
+        "image": "ps4_control_blue_v2.png",
+        "stock": 28
+    }
+}, {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS4-CONT-DS-BRO-V1",
+        "name": "PS4 v1 - Bronze, Dualshock",
+        "description": "The Playstation 4 controller in bronze, boasting Dualshock and motion control capabilities to immerse you into the game. This is the first version of the Playstation 4 controller",
+        "price": 23.99,
+        "category": 1,
+        "console": 4,
+        "image_url": "",
+        "image": "ps4_control_bronze_v1.png",
+        "stock": 28
+    }
+}, {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS4-CONT-DS-CAM-BLU-V2",
+        "name": "PS4 v2 - Camo Blue, Dualshock",
+        "description": "The Playstation 4 controller in blue and camoflauge styling, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
+        "price": 24.99,
+        "category": 1,
+        "console": 4,
+        "image_url": "",
+        "image": "ps4_control_camo-blue_v2.png",
+        "stock": 28
+    }
+}, {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS4-CONT-DS-CAM-GRN-V2",
+        "name": "PS4 v2 - Camo Green, Dualshock",
+        "description": "The Playstation 4 controller in green and camoflauge styling, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
+        "price": 24.99,
+        "category": 1,
+        "console": 4,
+        "image_url": "",
+        "image": "ps4_control_camo-gre_v2.png",
+        "stock": 28
+    }
+}, {
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS4-CONT-DS-SLV-V2",
+        "name": "PS4 v2 - Silver, Dualshock",
+        "description": "The Playstation 4 controller in silver, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
+        "price": 24.99,
+        "category": 1,
+        "console": 4,
+        "image_url": "",
+        "image": "ps4_control_silver_v2.png",
+        "stock": 28
+    }
+}, {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS4-CONT-DS-STL-V2",
+        "name": "PS4 v2 - Steel, Dualshock",
+        "description": "The Playstation 4 controller in Steel, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
+        "price": 24.99,
+        "category": 1,
+        "console": 4,
+        "image_url": "",
+        "image": "ps4_control_steel_v2.png",
+        "stock": 28
+    }
+}, {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS4-CONT-DS-SUNSET-V2",
+        "name": "PS4 v2 - Sunset, Dualshock",
+        "description": "The Playstation 4 controller in eye-catching sunset, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
+        "price": 24.99,
+        "category": 1,
+        "console": 4,
+        "image_url": "",
+        "image": "ps4_control_sunset_v2.png",
+        "stock": 28
+    }
+}, {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS4-CONT-DS-TRA-RED-V2",
+        "name": "PS4 v2 - Transparent Red, Dualshock",
+        "description": "The Playstation 4 controller in transparent red, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
+        "price": 24.99,
+        "category": 1,
+        "console": 4,
+        "image_url": "",
+        "image": "ps4_control_tr-red_v2.png",
+        "stock": 28
+    }
+}, {
+    "pk": 17,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS4-CONT-DS-TRA-V2",
+        "name": "PS4 v2 - Transparent, Dualshock",
+        "description": "The Playstation 4 controller in transparent, boasting Dualshock and motion control capabilities to immerse you into the game. This is the second version of the Playstation 4 controller",
+        "price": 24.99,
+        "category": 1,
+        "console": 4,
+        "image_url": "",
+        "image": "ps4_control_tramp_v2.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 18,
+    "model": "products.product",
+    "fields": {
+        "sku": "PS4-CONT-DS-WHT-V1",
+        "name": "PS4 v1 - White, Dualshock",
+        "description": "The Playstation 4 controller in white, boasting Dualshock and motion control capabilities to immerse you into the game. This is the first version of the Playstation 4 controller",
+        "price": 24.99,
+        "category": 1,
+        "console": 4,
+        "image_url": "",
+        "image": "ps4_control_white_v1.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 19,
+    "model": "products.product",
+    "fields": {
+        "sku": "DRMCST-CONT-GRAY",
+        "name": "DreamCast Controller",
+        "description": "",
+        "price": 19.99,
+        "category": 1,
+        "console": 15,
+        "image_url": "",
+        "image": "dreamcast-con-gray.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 20,
+    "model": "products.product",
+    "fields": {
+        "sku": "GAMCUB-CONT-BLA",
+        "name": "GameCube Controller (Black)",
+        "description": "",
+        "price": 19.99,
+        "category": 1,
+        "console": 9,
+        "image_url": "",
+        "image": "gamecube_con_black.jpg",
+        "stock": 1000
+    }
+}, {
+    "pk": 21,
+    "model": "products.product",
+    "fields": {
+        "sku": "GAMCUB-CONT-PUR",
+        "name": "GameCube Controller (purple)",
+        "description": "",
+        "price": 19.99,
+        "category": 1,
+        "console": 9,
+        "image_url": "",
+        "image": "gamecube_con_purple.jpg",
+        "stock": 1000
+    }
+}, {
+    "pk": 22,
+    "model": "products.product",
+    "fields": {
+        "sku": "MEGDRI-CONT-6B-BLA",
+        "name": "Megadrive 6-Button Controller",
+        "description": "Sega Megadrive controller, The console is known as the \"Sega Genesis\" in North America",
+        "price": 19.99,
+        "category": 1,
+        "console": 14,
+        "image_url": "",
+        "image": "megadrive_con_6btn_black.jpg",
+        "stock": 1000
+    }
+}, {
+    "pk": 23,
+    "model": "products.product",
+    "fields": {
+        "sku": "N64-CONT-GRA",
+        "name": "N64 Controller (Gray)",
+        "description": "",
+        "price": 18.99,
+        "category": 1,
+        "console": 8,
+        "image_url": "",
+        "image": "n64_con_gray.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 24,
+    "model": "products.product",
+    "fields": {
+        "sku": "NES-CONT-ADV",
+        "name": "NES ADVANTAGE CONTROLLER",
+        "description": "Get an adavantage with the NES ADVANTAGE controller",
+        "price": 25.99,
+        "category": 1,
+        "console": 10,
+        "image_url": "",
+        "image": "nes_advantage.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 25,
+    "model": "products.product",
+    "fields": {
+        "sku": "NES-CONT",
+        "name": "NES Controller",
+        "description": "",
+        "price": 15.99,
+        "category": 1,
+        "console": 10,
+        "image_url": "",
+        "image": "nes_con.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 26,
+    "model": "products.product",
+    "fields": {
+        "sku": "SNES-CONT-GRAY",
+        "name": "SNES Controller (Gray)",
+        "description": "",
+        "price": 17.99,
+        "category": 1,
+        "console": 11,
+        "image_url": "",
+        "image": "snes_con_gr.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 27,
+    "model": "products.product",
+    "fields": {
+        "sku": "SWTC-CONT-PRO",
+        "name": "Switch Pro Controller",
+        "description": "",
+        "price": 26.99,
+        "category": 1,
+        "console": 12,
+        "image_url": "",
+        "image": "switch_con_pro_tr-gra.jpg",
+        "stock": 1000
+    }
+}, {
+    "pk": 28,
+    "model": "products.product",
+    "fields": {
+        "sku": "XBOX-DUKE",
+        "name": "XBOX - The Duke",
+        "description": "",
+        "price": 18.99,
+        "category": 1,
+        "console": 5,
+        "image_url": "",
+        "image": "xbox_the-duke.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 29,
+    "model": "products.product",
+    "fields": {
+        "sku": "XBX360-CONT-BLA",
+        "name": "XBOX 360 Controller (Black)",
+        "description": "",
+        "price": 18.99,
+        "category": 1,
+        "console": 6,
+        "image_url": "",
+        "image": "xbox360-con-black.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 30,
+    "model": "products.product",
+    "fields": {
+        "sku": "XBX360-CONT-WHT",
+        "name": "XBOX 360 Controller (White)",
+        "description": "",
+        "price": 18.99,
+        "category": 1,
+        "console": 6,
+        "image_url": "",
+        "image": "xbox360-con-white.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 31,
+    "model": "products.product",
+    "fields": {
+        "sku": "XBXONE-CONT-BLA",
+        "name": "XBOX One Controller (Black)",
+        "description": "",
+        "price": 24.99,
+        "category": 1,
+        "console": 7,
+        "image_url": "",
+        "image": "xboxone_control_black.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 32,
+    "model": "products.product",
+    "fields": {
+        "sku": "XBXONE-CONT-ELT-WHT",
+        "name": "XBOX One Controller Elite (White)",
+        "description": "",
+        "price": 34.99,
+        "category": 1,
+        "console": 7,
+        "image_url": "",
+        "image": "xboxone_control_elite_white.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 33,
+    "model": "products.product",
+    "fields": {
+        "sku": "XBXONE-CONT-RED",
+        "name": "XBOX One Controller (Red)",
+        "description": "",
+        "price": 24.99,
+        "category": 1,
+        "console": 7,
+        "image_url": "",
+        "image": "xboxone_control_red.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 34,
+    "model": "products.product",
+    "fields": {
+        "sku": "XBXONE-CONT-SPNGBOB",
+        "name": "XBOX One Controller (Spongebob)",
+        "description": "Limited edition Spongebob Squarepants themed controller.",
+        "price": 24.99,
+        "category": 1,
+        "console": 7,
+        "image_url": "",
+        "image": "xboxone_control_spngbob.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 35,
+    "model": "products.product",
+    "fields": {
+        "sku": "XBXONE-CONT-TEA",
+        "name": "XBOX One Controller (Teal)",
+        "description": "",
+        "price": 24.99,
+        "category": 1,
+        "console": 7,
+        "image_url": "",
+        "image": "xboxone_control_teal.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 36,
+    "model": "products.product",
+    "fields": {
+        "sku": "XBXONE-CONT-BT-WHT",
+        "name": "XBOX One Controller Bluetooth (White)",
+        "description": "",
+        "price": 24.99,
+        "category": 1,
+        "console": 7,
+        "image_url": "",
+        "image": "xboxone_control_wht_bt.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 37,
+    "model": "products.product",
+    "fields": {
+        "sku": "XBXONE-CONT-WHT-MARB",
+        "name": "XBOX One Controller (Marble White)",
+        "description": "",
+        "price": 24.99,
+        "category": 1,
+        "console": 7,
+        "image_url": "",
+        "image": "xboxone_control_wht_marble.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 38,
+    "model": "products.product",
+    "fields": {
+        "sku": "XBXONE-CONT-TEA",
+        "name": "XBOX One Controller Elite (White & Silver)",
+        "description": "",
+        "price": 34.99,
+        "category": 1,
+        "console": 7,
+        "image_url": "",
+        "image": "xboxone_control_wht_silv.png",
+        "stock": 1000
+    }
+}, {
+    "pk": 39,
+    "model": "products.product",
+    "fields": {
+        "sku": "XBXONE-CONT-WIRED-WHT",
+        "name": "XBOX One Controller Wired (White)",
+        "description": "",
+        "price": 22.99,
+        "category": 1,
+        "console": 7,
+        "image_url": "",
+        "image": "xboxone_control_wht_wire.png",
+        "stock": 1000
+    }
+}]

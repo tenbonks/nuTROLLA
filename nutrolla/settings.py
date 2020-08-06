@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'allauth.account',  # this model is present in admin panel
     'allauth.socialaccount',  # this model is present in admin panel
     'home',
+    'products',
 ]
 
 MIDDLEWARE = [
