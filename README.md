@@ -1,5 +1,4 @@
 # nuTROLLA
-# Scriptio | Quotes App
 
 Callout to the user on why this site is great and the services it can offer
 
@@ -88,8 +87,7 @@ Follow this along with the format used above
 
 **Content**
 
-There is some content written by me within the site, all the things that don't change pretty much, so navigation elements and such.
-All of the quotes at this time were written by me, but all the quotes are respectively named by who said them.
+The JSON fixture files were created by me, the product images used are accredited in the media section below
 
 ---
 
