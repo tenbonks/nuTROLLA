@@ -24,10 +24,11 @@
                 Controllers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="controllers-link">
-                <a href="" class="dropdown-item">Playstation</a>
-                <a href="" class="dropdown-item">Xbox</a>
-                <a href="" class="dropdown-item">Nintendo</a>
-                <a href="" class="dropdown-item">All Controllers</a>
+                <a href="{% url 'products' %}?console=playstation_1,playstation_2,playstation_3,playstation_4&category=controllers" class="dropdown-item">Playstation</a>
+                <a href="{% url 'products' %}?console=xbox_original,xbox_360,xbox_one&category=controllers" class="dropdown-item">Xbox</a>
+                <a href="{% url 'products' %}?console=nintendo_64,gamecube,nes,snes,switch&category=controllers" class="dropdown-item">Nintendo</a>
+                <a href="{% url 'products' %}?console=saturn,megadrive,dreamcast&category=controllers" class="dropdown-item">Sega</a>
+                <a href="{% url 'products' %}?console=playstation_1,playstation_2,playstation_3,playstation_4,xbox_original,xbox_360,xbox_one,nintendo_64,gamecube,nes,snes,switch,saturn,megadrive,dreamcast&category=controllers" class="dropdown-item">All Controllers</a>
             </div>
         </li>
 
@@ -37,16 +38,17 @@
                 Parts
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="parts-link">
-                <a href="" class="dropdown-item">Playstation</a>
-                <a href="" class="dropdown-item">Xbox</a>
-                <a href="" class="dropdown-item">Nintendo</a>
-                <a href="" class="dropdown-item">All Parts</a>
+                <a href="{% url 'products' %}?console=playstation_1,playstation_2,playstation_3,playstation_4&category=parts" class="dropdown-item">Playstation</a>
+                <a href="{% url 'products' %}?console=xbox_original,xbox_360,xbox_one&category=parts" class="dropdown-item">Xbox</a>
+                <a href="{% url 'products' %}?console=nintendo_64,gamecube,nes,snes,switch&category=parts" class="dropdown-item">Nintendo</a>
+                <a href="{% url 'products' %}?console=saturn,megadrive,dreamcast&category=parts" class="dropdown-item">Sega</a>
+                <a href="{% url 'products' %}?console=playstation_1,playstation_2,playstation_3,playstation_4,xbox_original,xbox_360,xbox_one,nintendo_64,gamecube,nes,snes,switch,saturn,megadrive,dreamcast&category=parts" class="dropdown-item">All Parts</a>
             </div>
         </li>
 
-        <li class="nav-item dropdown">
-            <a href="" class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="repair-link">
-                Repair
+        <li class="nav-item text-magenta">
+            <a href="{% url 'products' %}?category=tools" class="logo-font font-weight-bold nav-link text-black mr-5"id="parts-link">
+                Tools
             </a>
         </li>
     </ul>
