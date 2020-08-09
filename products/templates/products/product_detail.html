@@ -30,11 +30,16 @@
             <div class="product-detail-container mb-5 mt-md-5">
                 <p class="mb-0">{{ product.name }}</p>
                 <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-                <p class="mb-0 text-left">{{ product.console.friendly_name }} {{ product.category.friendly_name }}</p>
+                <p class="small mt-1 mb-0">
+                    <a class="text-muted" href="{% url 'products' %}?console={{ product.console.name }}&category={{ product.category.name }}">
+                        <i class="fas fa-tag mr-1" aria-hidden="true">{{ product.console.friendly_name }} {{ product.category.friendly_name }}</i>
+                    </a>
+                </p>
                 <p class="mt-3"> {{ product.description }}</p>
 
                 {% if product.category.name == "controllers" %}
-                <small><strong>NOTE:</strong> All our controllers are issued with a 1 year warranty from purchase date</small>
+                <small><strong>NOTE:</strong> All our controllers are issued with a 1 year warranty from purchase
+                    date</small>
                 {% endif %}
 
             </div>
