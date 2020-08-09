@@ -13,7 +13,7 @@
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
-                <a href="{% url 'products' %}?sort=console&direction=asc" class="dropdown-item">By Console</a>
+                <a href="{% url 'products' %}?console=playstation_1,playstation_2,playstation_3,playstation_4,xbox_original,xbox_360,xbox_one,nintendo_64,gamecube,nes,snes,switch,saturn,megadrive,dreamcast&sort=console&direction=asc" class="dropdown-item">By Console</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
