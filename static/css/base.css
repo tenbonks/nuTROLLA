@@ -147,8 +147,20 @@ footer a:hover {
     border-color: #F6019D;
 }
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 .border-purple {
-    border: 1px #791E94 !important
+    border: 1px solid #791E94 !important
 }
 
 .category-badge > .text-magenta:hover {
