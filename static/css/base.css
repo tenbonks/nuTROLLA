@@ -49,23 +49,23 @@ a {
 
 /* Background colours */
 .bg-dark-pri {
-    background: #241734;
+    background: #241734 !important;
 }
 
 .bg-dark-sec {
-    background: #2E2157;
+    background: #2E2157 !important;
 }
 
 .bg-purple {
-    background: #791E94;
+    background: #791E94 !important;
 }
 
 .bg-purple-sec {
-    background: #541388;
+    background: #541388 !important;
 }
 
 .bg-purple-ter {
-    background: #540D6E;
+    background: #540D6E !important;
 }
 
 .bg-opaque {
@@ -149,6 +149,10 @@ footer a:hover {
 
 .border-purple {
     border: 1px #791E94 !important
+}
+
+.category-badge > .text-magenta:hover {
+    color: #920075 !important;
 }
 
 /* Text Styles */
