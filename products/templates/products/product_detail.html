@@ -30,11 +30,23 @@
             <div class="product-detail-container mb-5 mt-md-5">
                 <p class="mb-0">{{ product.name }}</p>
                 <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-                <p class="small mt-1 mb-0">
-                    <a class="text-muted" href="{% url 'products' %}?console={{ product.console.name }}&category={{ product.category.name }}">
-                        <i class="fas fa-tag mr-1" aria-hidden="true">{{ product.console.friendly_name }} {{ product.category.friendly_name }}</i>
-                    </a>
-                </p>
+                
+                {% if product.category and not product.console %}
+                    <p class="small mt-1 mb-0">
+                        <a class="text-muted"
+                            href="{% url 'products' %}?category={{ product.category.name }}">
+                            <i class="fas fa-tag mr-1" aria-hidden="true"></i>{{ product.category.friendly_name }}
+                        </a>
+                    </p>
+                {% endif %}
+                {% if product.console %}
+                    <p class="small mt-1 mb-0">
+                        <a class="text-muted"
+                            href="{% url 'products' %}?category={{ product.category.name }}&console={{ product.console.name }}">
+                            <i class="fas fa-tag mr-1" aria-hidden="true"></i> {{ product.console.friendly_name }} {{ product.category.friendly_name }}
+                        </a>
+                    </p>
+                {% endif %}
                 <p class="mt-3"> {{ product.description }}</p>
 
                 {% if product.category.name == "controllers" %}
