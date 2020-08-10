@@ -67,21 +67,26 @@
                                 (A-Z)</option>
                             <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name
                                 (Z-A)</option>
-                            <option value="console_asc" {% if current_sorting == 'console_asc' %}selected{% endif %}>
-                                Console (A-Z)</option>
-                            <option value="console_desc"
-                                {% if current_sorting == 'console_desc' %}selected{% endif %}>Console (Z-A)</option>    
-                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
-                                Category (A-Z)</option>
-                            <option value="category_desc"
-                                {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                            {% if current_console|length != 1 %}
+                                <option value="console_asc" {% if current_sorting == 'console_asc' %}selected{% endif %}>
+                                    Console (A-Z)</option>
+                                <option value="console_desc"
+                                    {% if current_sorting == 'console_desc' %}selected{% endif %}>Console (Z-A)</option> 
+                            {% endif %}
+                            {% if current_categories|length != 1 %}   
+                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
+                                    Category (A-Z)</option>
+                                <option value="category_desc"
+                                    {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                            {% endif %}
                         </select>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
-                        {% if search_term %}
-                                <span class="small"><a href="{% url 'products' %}?categories=controllers,parts,tools">All Products</a> | </span>
+                        
+                        {% if search_term or current_categories|length == 1 %}
+                                <span class="small"><a href="{% url 'products' %}?category=controllers,parts,tools">All Products</a> | </span>
                         {% endif %}
                         {{ products|length }} Products{% if search_term %} found for
                         <strong>"{{ search_term }}"</strong>{% endif %}
@@ -164,5 +169,33 @@
     </div>
 </div>
 
+
+{% endblock %}
+
+
+{% block postload_js %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 
 {% endblock %}
