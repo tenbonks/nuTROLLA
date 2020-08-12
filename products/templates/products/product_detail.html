@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_title %} |  {{ product.console.friendly_name }} {{ product.category.friendly_name }} {% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -53,7 +55,7 @@
                 <div>
                     <small>
                         <strong>NOTE:</strong> 
-                        All our controllers are issued with a 1 year warranty from purchase date
+                        All our controllers are issued with a 1 year warranty from purchase date.
                     </small>
                 </div>
                 {% endif %}

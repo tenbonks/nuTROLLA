@@ -27,6 +27,10 @@ a {
     height: auto;
 }
 
+#push-footer-down {
+    min-height: 75vh;
+}
+
 /* ---------- Special effects ---------- */
 .neon-glow {
     background: linear-gradient(#F6019D, rgba(255, 255, 255, 0));   
