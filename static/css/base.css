@@ -22,7 +22,7 @@ a {
     padding-bottom: 3rem;
 }
 
-/* Special effects */
+/* ---------- Special effects ---------- */
 .neon-glow {
     background: linear-gradient(#F6019D, rgba(255, 255, 255, 0));   
 }
@@ -47,7 +47,7 @@ a {
     padding: 1rem;
 }
 
-/* Background colours */
+/* ---------- Background colours ---------- */
 .bg-dark-pri {
     background: #241734 !important;
 }
@@ -86,7 +86,7 @@ a {
 }
 
 
-/* From Bulma, keeps icons aligned and sized consistently */
+/* ---------- From Bulma, keeps icons aligned and sized consistently ---------- */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -95,7 +95,7 @@ a {
     width: 1.5rem;
 }
 
-/* Link/Btn Styles */
+/* ---------- Link/Btn Styles ---------- */
 .main-logo-link {
     width: fit-content;
 }
@@ -110,8 +110,10 @@ footer a {
     background-color: #241734;
 }
 
-.dropdown-menu:hover a {
-    background-color: #241734;
+.dropdown-menu:hover a,
+.dropdown-menu:active a,
+.dropdown-menu:focus a {
+    background-color: #241734 !important;
 }
 
 nav a:hover,
@@ -121,9 +123,15 @@ footer a:hover {
 }
 
 .btn-purple {
-    color: #fff;
+    color: #fff !important;
     background-color: #791E94;
     border-color: #791E94;
+}
+
+.btn-outline-purple {
+    color: #791E94 !important;
+    background-color: #fff;
+    border: 1px solid #791E94;
 }
 
 .big-shop-btn {
@@ -142,9 +150,17 @@ footer a:hover {
 .btn-purple:hover,
 .btn-purple:active,
 .btn-purple:focus {
-    color: #fff;
+    color: #fff !important;
     background-color: #540D6E;
     border-color: #F6019D;
+}
+
+.btn-outline-purple:hover,
+.btn-outline-purple:active,
+.btn-outline-purple:focus {
+    color: #fff !important;
+    background-color: #791E94;
+    border: 1px solid #F6019D;
 }
 
 .btt-button {
@@ -167,7 +183,8 @@ footer a:hover {
     color: #920075 !important;
 }
 
-/* Text Styles */
+
+/* ---------- Text Styles ---------- */
 .logo-font {
     text-transform: uppercase;
 }
@@ -200,7 +217,7 @@ footer a:hover {
     color: #3DE2E6 !important;
 }
 
-/* MEDIA QUERIES - Code copied and adapted from Code Insitute, learning material */
+/* ---------- MEDIA QUERIES - Code copied and adapted from Code Insitute, learning material ---------- */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
