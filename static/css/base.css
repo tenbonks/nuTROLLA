@@ -213,8 +213,12 @@ footer a:hover {
     color: #920075 !important;
 }
 
-.text-cyan {
-    color: #3DE2E6 !important;
+.text-yellow {
+    color: #F9C80E !important;
+}
+
+.text-yellow:hover {
+    color: #b6910c !important;
 }
 
 /* ---------- MEDIA QUERIES - Code copied and adapted from Code Insitute, learning material ---------- */
