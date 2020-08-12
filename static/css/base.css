@@ -22,6 +22,11 @@ a {
     padding-bottom: 3rem;
 }
 
+#bag-image {
+    max-width: 8rem;
+    height: auto;
+}
+
 /* ---------- Special effects ---------- */
 .neon-glow {
     background: linear-gradient(#F6019D, rgba(255, 255, 255, 0));   
