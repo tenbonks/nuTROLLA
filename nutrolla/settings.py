@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',  # this model is present in admin panel
     'home',
     'products',
+    'bag',
 ]
 
 MIDDLEWARE = [
