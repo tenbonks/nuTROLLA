@@ -147,9 +147,9 @@
                                 <div class="col">
                                     <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}
                                         {% if product.stock < 10 and product.stock > 0 %}
-                                        <span class="text-right muted text-danger my-auto"><small>Only {{ product.stock }} left</small></span>
+                                        <span class="float-right muted text-danger my-auto"><small>Only {{ product.stock }} left</small></span>
                                         {% elif product.stock <= 0 %}
-                                        <span class="text-right muted text-danger"><small>Out of Stock</small></span>
+                                        <span class="float-right muted text-danger"><small>Out of Stock</small></span>
                                         {% endif %}
                                     </p>
                                     
