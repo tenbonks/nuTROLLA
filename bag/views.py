@@ -25,7 +25,6 @@ def add_to_bag(request, item_id):
             bag[item_id] = stock_level
     else:
         bag[item_id] = quantity
-        print(bag[item_id])
         if bag[item_id] > stock_level:
             bag[item_id] = stock_level
 
