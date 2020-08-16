@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -48,7 +49,13 @@
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                             <p class="my-0 small text-muted"><strong>SKU: {{ item.product.sku|upper }}</strong></p>
-                            <p class="my-0 small text-danger"><strong>Only {{ item.product.stock }} left</strong></p>
+                            
+                            {% if item.product.stock <= 10 %}
+                                <p class="my-0 small text-danger"><strong>Only {{ item.product.stock }} left</strong></p>
+                            {% else %}
+                                <p class="my-0 small text-muted"><strong>{{ item.product.stock }} in stock</strong></p>
+                            {% endif %}
+                            
                         </td>
                         
                         <td class="py-3">
@@ -94,7 +101,7 @@
                         </td>
                         
                         <td class="py-3">
-                            <p class="my-0">{{ item.product.price }}</p>
+                            <p class="my-0">£{{ item.product.price  | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
