@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, get_object_or_404, reverse
+from django.shortcuts import (render, redirect, get_object_or_404,
+                              reverse, HttpResponse)
 from products.models import Product
 
 # Create your views here.
@@ -45,8 +46,23 @@ def adjust_bag(request, item_id):
         if bag[item_id] > stock_level:
             bag[item_id] = stock_level
     else:
-        print(item_id)
+
         bag.pop(item_id)
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
+
+
+def remove_from_bag(request, item_id):
+    """ Remove the item from the bag """
+
+    try:
+        bag = request.session.get('bag', {})
+
+        bag.pop(item_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
