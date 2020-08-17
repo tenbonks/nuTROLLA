@@ -1,5 +1,6 @@
 from django.shortcuts import (render, redirect, get_object_or_404,
                               reverse, HttpResponse)
+from django.contrib import messages
 from products.models import Product
 
 # Create your views here.
@@ -26,6 +27,7 @@ def add_to_bag(request, item_id):
             bag[item_id] = stock_level
     else:
         bag[item_id] = quantity
+        messages.success(request, f'Added {product.name} to your bag')
         if bag[item_id] > stock_level:
             bag[item_id] = stock_level
 

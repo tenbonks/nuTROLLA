@@ -31,6 +31,23 @@ a {
     min-height: 75vh;
 }
 
+
+/* ---------- Toast styles ---------- */
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 9999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /* ---------- Special effects ---------- */
 .neon-glow {
     background: linear-gradient(#F6019D, rgba(255, 255, 255, 0));   
