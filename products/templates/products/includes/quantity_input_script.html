@@ -1,12 +1,9 @@
 <!-- This code was copied from Code Institutes, Botique Ado Mini Project, I've adapted the handleEnableDisable to check for stock level -->
 <script type="text/javascript">
 
-    //  Disable -/+ buttons outside ranges of 1-99 or if above stockLevel
-    function handleEnableDisable(itemId) {
-        // This is just the max attr val, but if the max attr is below 99, the max attr will be set to the stock level of the product
-        var stockLevel = $('.qty_input').attr('max');
+    //  Disable -/+ buttons outside ranges of 1-99 or if currentValue above stockLevel
+    function handleEnableDisable(itemId, stockLevel) {
         var currentValue = parseInt($(`#id_qty_${itemId}`).val());
-        
         var minusDisabled = currentValue < 2;
         var plusDisabled = currentValue > 98 || currentValue > (stockLevel - 1);
         
@@ -31,19 +28,21 @@
     $('.increment-qty').click(function(e) {
         e.preventDefault();
         var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+        var stockLevel = $(closestInput).attr('max');
         var currentValue = parseInt($(closestInput).val());
         $(closestInput).val(currentValue + 1);
         var itemId = $(this).data('item_id');
-        handleEnableDisable(itemId)
+        handleEnableDisable(itemId, stockLevel)
     });
 
     //  Decrement the qty by 1 when the minus button is pressed
     $('.decrement-qty').click(function(e) {
         e.preventDefault();
         var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+        var stockLevel = $(closestInput).attr('max');
         var currentValue = parseInt($(closestInput).val());
         $(closestInput).val(currentValue - 1);
         var itemId = $(this).data('item_id');
-        handleEnableDisable(itemId)
+        handleEnableDisable(itemId, stockLevel)
     });
 </script>
