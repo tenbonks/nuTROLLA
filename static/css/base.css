@@ -48,6 +48,12 @@ a {
     height: 2px;
 }
 
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 /* ---------- Special effects ---------- */
 .neon-glow {
     background: linear-gradient(#F6019D, rgba(255, 255, 255, 0));   

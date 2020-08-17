@@ -55,8 +55,9 @@ def adjust_bag(request, item_id):
 
     if quantity > 0:
         bag[item_id] = quantity
-        messages.success(request,
-                         f'updated {product.name} quantity to {quantity}')
+        if bag[item_id] <= stock_level:
+            messages.success(request,
+                             f'updated {product.name} quantity to {quantity}')
         if bag[item_id] > stock_level:
             bag[item_id] = stock_level
             messages.info(request,
