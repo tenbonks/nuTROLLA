@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
 
@@ -39,10 +39,10 @@
 
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
 
-    <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-dark-pri pt-lg-2 d-none d-lg-flex">
+    <header class="container-fluid fixed-top neon-banner">
+        <div id="topnav" class="row bg-dark-pri pt-lg-2 d-none d-lg-flex neon-glow">
             
             <div class="col-12 col-lg-4 my-auto py-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -120,11 +120,7 @@
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
-        
-        <div class="row">
-            <div class="neon-banner"></div>
-        </div>
-        
+            
     </header>
 
     {% if messages %}
@@ -158,7 +154,7 @@
     {% endblock %}
 
 
-<footer class="page-footer font-small bg-dark-pri pt-4 text-magenta">
+<footer class="page-footer font-small bg-dark-pri pt-4 text-magenta mt-auto">
     <!-- this whole footer is adapted from https://mdbootstrap.com/docs/jquery/navigation/footer/ -->
     <div class="container-fluid text-center text-md-left">
       <div class="row">
