@@ -10,37 +10,36 @@ class OrderForm(forms.ModelForm):
                   'town_or_city', 'postcode', 'country',
                   'county',)
 
+    def __init__(self, *args, **kwargs):
+        """
+        Add placeholder and classes, remove auto-generated labels,
+        and set autofocus on the first field of the form
+        """
 
-def __init__(self, *args, **kwargs):
-    """
-    Add placeholder and classes, remove auto-generated labels,
-    and set autofocus on the first field of the form
-    """
+        super().__init__(*args, **kwargs)
+        placeholders = {
+            'full_name': 'Full Name',
+            'email': 'Email Address',
+            'phone_number': 'Phone Number',
+            'country': 'Country',
+            'postcode': 'Post Code',
+            'town_or_city': 'Town or City',
+            'street_address1': 'Street Address 1',
+            'street_address2': 'Street Address 2',
+            'county': 'County',
+        }
 
-    super().__init__(*args, **kwargs)
-    placeholders = {
-        'full_name': 'Full Name',
-        'email': 'Email Address',
-        'phone_number': 'Phone Number',
-        'country': 'Country',
-        'postcode': 'Post Code',
-        'town_or_city': 'Town or City',
-        'street_address1': 'Street Address 1',
-        'street_address2': 'Street Address 2',
-        'county': 'County',
-    }
+        # autofocus on the full_name field upon page load
+        self.fields['full_name'].widget.attrs['autofocus'] = True
 
-    # autofocus on the full_name field upon page load
-    self.fields['full_name'].widget.attrs['autofocus'] = True
-
-    # itterate through the fields, add '*' to placeholder if it is required,
-    # set all placeholder attrs to their values from placeholders dict,
-    # add css class
-    for field in self.fields:
-        if self.field[field].required:
-            placeholder = f'{placeholders[field]} *'
-        else:
-            placeholder = placeholders[field]
-        self.fields[field].widget.attrs['palaceholder'] = placeholder
-        self.fields[field].widget.attrs['class'] = 'stripe-style-input'
-        self.fields[field].label = False
+        # itterate through the fields, add '*' to placeholder if required,
+        # set all placeholder attrs to their values from placeholders dict,
+        # add css class
+        for field in self.fields:
+            if self.fields[field].required:
+                placeholder = f'{placeholders[field]} *'
+            else:
+                placeholder = placeholders[field]
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['class'] = 'stripe-style-input'
+            self.fields[field].label = False
