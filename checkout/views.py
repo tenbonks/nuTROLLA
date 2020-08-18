@@ -11,10 +11,9 @@ def checkout(request):
                        "Oops, there's nothing in your bag to checkout")
         return redirect(reverse('products'))
 
-        order_form = OrderForm()
-        template = 'checkout/checkout.html'
-        context = {
-            'order_form': order_form,
-        }
-
-        return render(request, template, context)
+    order_form = OrderForm()
+    template = 'checkout/checkout.html'
+    context = {
+        'order_form': order_form,
+    }
+    return render(request, template, context)
