@@ -15,7 +15,8 @@
     var allQtyInputs = $('.qty_input');
     for(var i = 0; i < allQtyInputs.length; i++){
         var itemId = $(allQtyInputs[i]).data('item_id');
-        handleEnableDisable(itemId)
+        var stockLevel = $(allQtyInputs[i]).attr('max');
+        handleEnableDisable(itemId, stockLevel)
     }
 
     // Check enable/disable everytime the input is changed
