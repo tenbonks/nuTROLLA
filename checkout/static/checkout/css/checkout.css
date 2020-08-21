@@ -1,3 +1,10 @@
+.order-overlook {
+  border: 1px solid #aab7c4;
+  border-radius: 3px;
+  padding: .3rem .5rem;
+}
+
+
 /* 
     All .Stripe styles come from: 
     https://stripe.com/docs/stripe-js
@@ -23,10 +30,6 @@
 
   .stripe-style-input::placeholder {
     color: #aab7c4;
-  }
-  .stripe-style-input::placeholder:invalid {
-    color: #dc3545;
-    border-color: #dc3545;
   }
   
   .StripeElement--invalid

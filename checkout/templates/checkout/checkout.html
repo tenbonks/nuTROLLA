@@ -33,18 +33,21 @@
     <div class="row">
 
         <!-- CHECKOUT ORDER PREVIEW -->
-        <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <p class="text-muted">Order Summary ({{ product_count }})</p>
-            <div class="row">
-                <div class="col-7 offset-2">
-                    <p class="mb-1 mt-0 small text-muted">Item</p>
+        <div class="col-12 offset-lg-1 col-lg-5 order-lg-last mb-5">
+            <p class="text-muted mb-2">Order Summary ({{ product_count }})</p>
+            <div class="order-overlook">
+                <div class="row">
+                    <div class="col-7 offset-2">
+                        <p class="mb-1 mt-0 small text-muted">Item</p>
+                    </div>
+                    <div class="col-3 text-right">
+                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>
+                    </div>
                 </div>
-                <div class="col-3 text-right">
-                    <p class="mb-1 mt-0 small text-muted">Subtotal</p>
-                </div>
-            </div>
 
-            {% for item in bag_items %}
+                <hr class="my-0">
+
+                {% for item in bag_items %}
                 <div class="row">
                     <div class="col-2 mb-1">
                         <a href="{% url 'product_detail' item.product.id %}">
@@ -57,17 +60,17 @@
                     </div>
 
                     <div class="col-7">
-                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                        <p class="my-0">{{ item.product.name }}</p>
                         <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                     </div>
 
                     <div class="col-3">
-                        <p class="my-0 small text-muted text-right">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        <p class="small mt-0 text-muted text-right">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                     </div>
                 </div>
-            {% endfor %}
+                {% endfor %}
 
-            <hr class="my-0">
+            </div>
 
             <div class="row text-right mt-2">
                 <div class="col-7 offset-2">
@@ -152,7 +155,7 @@
                         </span>
                     </button>
 
-                    <p class="small text-danger my-0">
+                    <p class="small text-danger my-2">
                         <span class="icon">
                             <i class="fas fa-exclamation-circle"></i>
                         </span>
