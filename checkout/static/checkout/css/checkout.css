@@ -1,14 +1,33 @@
+/* 
+    All .Stripe styles come from: 
+    https://stripe.com/docs/stripe-js
+*/
+
 .order-overlook {
   border: 1px solid #aab7c4;
   border-radius: 3px;
   padding: .3rem .5rem;
 }
 
+#loading-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37,23,52,0.9);
+  z-index: 9999;
+}
 
-/* 
-    All .Stripe styles come from: 
-    https://stripe.com/docs/stripe-js
-*/
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
+}
+
 .StripeElement,
 .stripe-style-input {
     box-sizing: border-box;
