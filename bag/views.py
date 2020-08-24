@@ -72,7 +72,7 @@ def adjust_bag(request, item_id):
     return redirect(reverse('view_bag'))
 
 
-def remove_from_bag(request, item_id):
+def remove_from_bag(request, item_id, no_stock=False):
     """ Remove the item from the bag """
 
     try:
@@ -80,8 +80,9 @@ def remove_from_bag(request, item_id):
         bag = request.session.get('bag', {})
 
         bag.pop(item_id)
-        messages.success(request,
-                         f'Removed {product.name} from your bag')
+        if not no_stock:
+            messages.success(request,
+                             f'Removed {product.name} from your bag')
         request.session['bag'] = bag
         return HttpResponse(status=200)
 

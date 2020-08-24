@@ -8,6 +8,7 @@ from .forms import Order, OrderForm
 from .models import OrderLineItem
 from products.models import Product
 from bag.contexts import bag_contents
+from bag.views import remove_from_bag
 
 import json
 import stripe
@@ -65,18 +66,34 @@ def checkout(request):
             for item_id, item_data in bag.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    order_line_item = OrderLineItem(
-                        order=order,
-                        product=product,
-                        quantity=item_data,
-                    )
+                    if item_data <= product.stock:
+                        # If items qty is under or equal to stocklevel,
+                        # add as line item, and reduce stock
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
+                        )
+                        order_line_item.save()
 
-                    print(product.stock)
-                    print(item_data)
+                        ammended_stock_level = product.stock - item_data
+                        product.stock = ammended_stock_level
+                        product.save()
+                    else:
+                        # Display error message, delete order,
+                        # remove item from bag and reverse to view_bag
+                        messages.error(request, (
+                            f"{ product.name} \
+                            isn't in stock and has been removed from your bag \
+                                and no charge has incurred."
+                            " Sorry for the inconvenience!")
+                        )
+                        order.delete()
+                        no_stock = True
+                        remove_from_bag(request, item_id, no_stock)
+                        return redirect(reverse('view_bag'))
+                        break
 
-                    # reduce stock level by quantity, will be here
-
-                    order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag\
@@ -107,8 +124,6 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-
-        print(intent)
 
         order_form = OrderForm()
 
