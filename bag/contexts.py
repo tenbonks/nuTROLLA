@@ -39,7 +39,8 @@ def bag_contents(request):
 
             else:
                 messages.error(request,
-                               f'{product.name} is now out of stock')
+                               f'{product.name} is now out of stock. \
+                               It has been removed from your bag')
                 items_to_remove.append(item_id)
 
     for item_id in items_to_remove:
