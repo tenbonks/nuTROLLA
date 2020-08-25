@@ -8,7 +8,7 @@ from .forms import Order, OrderForm
 from .models import OrderLineItem
 from products.models import Product
 from bag.contexts import bag_contents
-from bag.views import remove_from_bag
+from bag.views import remove_from_bag, adjust_bag
 
 import json
 import stripe
@@ -66,9 +66,11 @@ def checkout(request):
             for item_id, item_data in bag.items():
                 try:
                     product = Product.objects.get(id=item_id)
+
+                    # If quantity is less than the stock level
+                    # compose the order with orderLineItem
                     if item_data <= product.stock:
-                        # If items qty is under or equal to stocklevel,
-                        # add as line item, and reduce stock
+
                         order_line_item = OrderLineItem(
                             order=order,
                             product=product,
@@ -79,20 +81,37 @@ def checkout(request):
                         ammended_stock_level = product.stock - item_data
                         product.stock = ammended_stock_level
                         product.save()
+
                     else:
-                        # Display error message, delete order,
-                        # remove item from bag and reverse to view_bag
-                        messages.error(request, (
-                            f"{ product.name} \
-                            isn't in stock and has been removed from your bag \
-                                and no charge has incurred."
-                            " Sorry for the inconvenience!")
-                        )
-                        order.delete()
-                        no_stock = True
-                        remove_from_bag(request, item_id, no_stock)
-                        return redirect(reverse('view_bag'))
-                        break
+                        # if quantity is above stock level & in stock
+                        if product.stock != 0 and item_data > product.stock:
+                            # reverse back to bag, notify the user of the error
+                            # delete order incase anything was added
+                            # before item became out of stock item
+                            messages.error(request, (
+                                f"Only {product.stock} of {product.name} \
+                                    in stock."
+                                " We've altered the amount for you, \
+                                    no payment was taken")
+                            )
+                            
+                            order.delete()
+                            return redirect(reverse('view_bag'))
+                            break
+                        else:
+                            # If the item is sold out, then do the same thing
+                            # remove_from_bag is used as item is out of stock
+                            messages.error(request, (
+                                f"{ product.name} \
+                                isn't currently in stock and has been removed \
+                                from your bag no charge has incurred."
+                                " Sorry for the inconvenience!")
+                            )
+                            order.delete()
+                            no_stock = True
+                            remove_from_bag(request, item_id, no_stock)
+                            return redirect(reverse('view_bag'))
+                            break
 
                 except Product.DoesNotExist:
                     messages.error(request, (
