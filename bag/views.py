@@ -23,8 +23,8 @@ def add_to_bag(request, item_id):
 
     if item_id in list(bag.keys()):
 
-        bag[item_id] += quantity
         if bag[item_id] <= stock_level:
+            bag[item_id] += quantity
             messages.success(request,
                              f'Added {quantity} {product.name} \
                                  to your bag')
