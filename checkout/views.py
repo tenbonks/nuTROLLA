@@ -41,6 +41,11 @@ def checkout(request):
     if request.method == "POST":
         bag = request.session.get('bag', {})
 
+        # if not bag:
+        #     messages.error(request,
+        #                    "Oops, some items in your bag are now out of stock")
+        #     return redirect(reverse('view_bag'))
+
         # save info is not added here as it does not exist on the model
         form_data = {
             'full_name': request.POST['full_name'],
@@ -82,37 +87,6 @@ def checkout(request):
                         product.stock = ammended_stock_level
                         product.save()
 
-                    else:
-                        # if quantity is above stock level & in stock
-                        if product.stock != 0 and item_data > product.stock:
-                            # reverse back to bag, notify the user of the error
-                            # delete order incase anything was added
-                            # before item became out of stock item
-                            messages.error(request, (
-                                f"Only {product.stock} of {product.name} \
-                                    in stock."
-                                " We've altered the amount for you, \
-                                    no payment was taken")
-                            )
-                            
-                            order.delete()
-                            return redirect(reverse('view_bag'))
-                            break
-                        else:
-                            # If the item is sold out, then do the same thing
-                            # remove_from_bag is used as item is out of stock
-                            messages.error(request, (
-                                f"{ product.name} \
-                                isn't currently in stock and has been removed \
-                                from your bag no charge has incurred."
-                                " Sorry for the inconvenience!")
-                            )
-                            order.delete()
-                            no_stock = True
-                            remove_from_bag(request, item_id, no_stock)
-                            return redirect(reverse('view_bag'))
-                            break
-
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag\
@@ -130,6 +104,7 @@ def checkout(request):
                 Please check your information")
     else:
         bag = request.session.get('bag', {})
+
         if not bag:
             messages.error(request,
                            "Oops, there's nothing in your bag to checkout")
