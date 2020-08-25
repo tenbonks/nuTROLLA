@@ -29,13 +29,14 @@ def bag_contents(request):
         else:
             total += product.stock * product.price
             product_count += product.stock
-
+            # bag[item_id] += product.stock
             if product.stock != 0:
                 bag_items.append({
                     'item_id': item_id,
                     'quantity': product.stock,
                     'product': product,
                 })
+
             else:
                 messages.error(request,
                                f'{product.name} is now out of stock')
@@ -43,9 +44,10 @@ def bag_contents(request):
 
     for item_id in items_to_remove:
         if item_id:
-            print(item_id)
-            remove_from_bag(request, item_id)
+            remove_from_bag(request, item_id, no_stock=True)
     grand_total = total
+
+    # request.session['bag'] = bag
 
     context = {
         'bag_items': bag_items,
