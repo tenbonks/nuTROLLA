@@ -1,0 +1,20 @@
+Hello {{ order.full_name}}!
+
+Order Received
+
+Thanks for your custom, below is your order information.
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Grand Total: £{{ order.grand_total }}
+
+Your order will be shipped to {{ order.street_address1}} {% if street_address2 %}, {{ street_address2 }}{% endif %}, {{ order.country }}
+
+Phone Number: {{ order.phone_number }}
+
+If you have any questions, please don't hesitate to contact us at {{ contact_email }}
+
+Sincerely,
+
+| nuTROLLA | 
