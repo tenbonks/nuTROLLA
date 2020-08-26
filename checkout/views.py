@@ -41,11 +41,6 @@ def checkout(request):
     if request.method == "POST":
         bag = request.session.get('bag', {})
 
-        # if not bag:
-        #     messages.error(request,
-        #                    "Oops, some items in your bag are now out of stock")
-        #     return redirect(reverse('view_bag'))
-
         # save info is not added here as it does not exist on the model
         form_data = {
             'full_name': request.POST['full_name'],
@@ -83,9 +78,9 @@ def checkout(request):
                         )
                         order_line_item.save()
 
-                        ammended_stock_level = product.stock - item_data
-                        product.stock = ammended_stock_level
-                        product.save()
+                        # ammended_stock_level = product.stock - item_data
+                        # product.stock = ammended_stock_level
+                        # product.save()
 
                 except Product.DoesNotExist:
                     messages.error(request, (
