@@ -26,7 +26,11 @@
             <h2 class="logo-font mb-4 text-center">
                 Thanks!
             </h2>
+                {% if from_profile %}
+                <p>Your order info is below. A confirmation email was to <strong>{{ order.email }}</strong> on <strong>{{ order.date }}</strong> </p>
+                {% else %}
                 <p>Your order info is below. A confirmation email will be sent to <strong>{{ order.email }}</strong> </p>
+                {% endif %}
             <hr>
         </div>
     </div>
@@ -188,12 +192,22 @@
     <div class="row">
 
         <div class="col-12 col-lg-7 text-right">
+
+            {% if from_profile %}
+            <a href="{% url 'profile' %}" class="btn btn-purple my-2">
+                <span class="icon mr-2">
+                    <i class="fas fa-angle-left"></i>
+                </span>
+                <span class="text-uppercase">Back to Profile</span>
+            </a>
+            {% else %}
             <a href="{% url 'products' %}?category=controllers,parts,tools" class="btn btn-purple my-2">
                 <span class="icon mr-2">
                     <i class="fas fa-question-circle"></i>
                 </span>
                 <span class="text-uppercase">Did you forget anything</span>
             </a>
+            {% endif %}
         </div>
 
     </div>
