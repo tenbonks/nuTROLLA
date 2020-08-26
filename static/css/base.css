@@ -203,6 +203,9 @@ footer a:hover {
     color: #920075 !important;
 }
 
+input[name='q']::placeholder {
+    color: #aab7c4
+}
 
 /* ---------- Text Styles ---------- */
 .logo-font {
@@ -247,6 +250,59 @@ footer a:hover {
     .container {
         max-width: 80%;
     }
+}
+
+/*  Allauth form formatting */
+
+.allauth-form-inner_content p {
+    margin-top: 1.5rem;
+    color: #6c757d;
+}
+
+.allauth-form-inner-content input {
+    border-color: #aab7c4;
+} 
+
+.allauth-form-inner_content label:not([for="id_remember"]) {
+    display: none;
+}
+
+.allauth-form-inner_content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner_content button,
+.allauth-form-inner_content input[type="submit"] {
+    /* style taken and adapted from bootstrap "btn" class */
+    display: inline-block;
+    font-weight: 400;
+    color: #fff !important;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #791E94;
+    border: 1px solid #791E94;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    /* std bootstrap btn transition */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-
+}
+
+.allauth-form-inner_content button:hover,
+.allauth-form-inner_content input[type=submit]:hover {
+    color: #fff !important;
+    background-color: #540D6E;
+    border-color: #F6019D;
+}
+
+.allauth-form-inner_content a {
+    /* text info col from bootstrap */
+    color: #17a2b8;
 }
 
 /* fixed top navbar only on medium and up */
