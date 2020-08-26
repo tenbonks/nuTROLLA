@@ -1,9 +1,5 @@
 .order-history {
-<<<<<<< HEAD
     max-height: 25rem;
-=======
-    max-height: 50rem;
->>>>>>> f9377b1d9e53e98a9df72ba77da581a014a2e836
     overflow-y: auto;
 }
 
