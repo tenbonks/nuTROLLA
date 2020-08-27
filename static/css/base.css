@@ -199,6 +199,10 @@ footer a:hover {
     border: 1px solid #791E94 !important
 }
 
+.border-gray {
+    border: solid 1px #aab7c4;
+}
+
 .category-badge > .text-magenta:hover {
     color: #920075 !important;
 }

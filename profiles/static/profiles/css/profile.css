@@ -3,6 +3,10 @@
     overflow-y: auto;
 }
 
+.profile-form-input {
+    border: 1px solid #aab7c4;
+}
+
 .profile-form-input::placeholder {
     color: #aab7c4
 }
