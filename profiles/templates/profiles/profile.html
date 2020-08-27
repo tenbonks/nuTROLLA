@@ -38,6 +38,7 @@
                 {% csrf_token %}
                 {{ form|crispy }}
                 <button class="btn btn-purple rounded text-uppercase float-right"> Update Information</button>
+                <a class="btn btn-purple text-uppercase float-right mr-1" href="{% url 'account_change_password' %}">Change Password</a>
             </form>
         </div>
 
