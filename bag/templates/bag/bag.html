@@ -42,8 +42,12 @@
                     {% for item in bag_items %}
                     <tr>
                         <td class="p3 w-25">
-                            <img src="{{ item.product.image.url }}" alt="img-fluid img-responsive rounded"
-                                id="bag-image">
+                            {% if item.product.image %}
+                            <img src="{{ item.product.image.url }}"alt="{{ item.product.name }}" id="bag-image">
+                            {% else %}
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" id="bag-image">
+                            {% endif %}
+
                         </td>
                         
                         <td class="py-3">
