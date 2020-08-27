@@ -275,6 +275,10 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+.allauth-form-inner_content .form-control {
+    border: 1px solid #aab7c4;
+}
+
 .allauth-form-inner_content button,
 .allauth-form-inner_content input[type="submit"] {
     /* style taken and adapted from bootstrap "btn" class */
