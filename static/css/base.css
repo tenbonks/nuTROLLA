@@ -24,6 +24,16 @@ a {
     height: auto;
 }
 
+.purple-form-container {
+    background: #2E2157 !important;
+    padding: 1rem;
+    border: 1px solid #791E94;
+    border-radius: 1rem;
+    color: white;
+    margin: 1rem 0 3rem 0;
+    box-shadow: 5px 10px 28px 2px rgba(246,1,157, 1);
+}
+
 /* ---------- Toast styles ---------- */
 .message-container {
     position: fixed;

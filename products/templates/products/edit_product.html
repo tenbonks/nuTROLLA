@@ -2,7 +2,7 @@
 {% load static %}
 
 
-{% block extra_title %} | Edit a Product{% endblock %}
+{% block extra_title %} | Editing {{ product.name }} {% endblock %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -17,8 +17,9 @@
 <div class="overlay"></div>
 <div class="container pt-3">
 
+
     <div class="row">
-        <div class="col-12 col-md-6 text-center">
+        <div class="col-12 offset-lg-3 col-lg-6 text-center">
             <h2 class="logo-font mb-4">
                 Product Management
             </h2>
@@ -28,15 +29,17 @@
     </div>
 
     <div class="row">
-        <div class="col-12 col-md-6">
-            <form class="form my-3" action="{% url 'edit_product' product.id %}" method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form | crispy }}
-            <div class="text-right">
-                <a class="btn btn-outline-purple rounded" href="{% url 'products' %}">Cancel</a>
-                <button class="btn btn-purple rounded" type="submit">Edit Product</button>
+        <div class="col-12 offset-lg-3 col-lg-6">
+            <div class="purple-form-container">
+                <form class="form my-3" action="{% url 'edit_product' product.id %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="text-center">
+                    <a class="btn btn-outline-purple rounded" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn btn-purple rounded" type="submit">Edit Product</button>
+                </div>
+                </form>
             </div>
-            </form>
         </div>
     </div>
 
