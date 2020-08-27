@@ -161,6 +161,8 @@ Product images were acquired from a dataset called [controllers](https://www.kag
 
 The Synthwave image I used for the background of the homepage is from [WallpaperAccess](https://wallpaperaccess.com/synthwave)
 
+no image icon is from [Flaticon/Freepik](Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>)
+
 ---
 
 **Acknowledgements**
