@@ -69,20 +69,13 @@ def checkout(request):
                 try:
                     product = Product.objects.get(id=item_id)
 
-                    # If quantity is less than the stock level
-                    # compose the order with orderLineItem
-                    if item_data <= product.stock:
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=item_data,
+                    )
 
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=item_data,
-                        )
-                        order_line_item.save()
-
-                        # ammended_stock_level = product.stock - item_data
-                        # product.stock = ammended_stock_level
-                        # product.save()
+                    order_line_item.save()
 
                 except Product.DoesNotExist:
                     messages.error(request, (
