@@ -34,10 +34,12 @@
             <!--  Category badges -->
             
             {% for cat in current_categories %}
+                {% if not current_category %}
                 <a href="{% url 'products' %}?category={{ cat.name }}{% if cat.name == 'controllers' or cat.name == 'parts'%}&console=saturn,megadrive,dreamcast,nintendo_64,gamecube,nes,snes,switch,xbox_original,xbox_360,xbox_one,playstation_1,playstation_2,playstation_3,playstation_4{% endif %}"
                     class="category-badge text-decoration-none">
                     <span class="p-2 mt-2 badge bg-dark-sec text-magenta border border-dark">{{ cat.friendly_name }}</span>
                 </a>
+                {% endif %}
             {% endfor %}
         
             <!-- Console badges -->
@@ -118,11 +120,12 @@
             </section>
 
             
-            {% if products|length == 0 %}
-            <div id="push-footer-down"></div>
-            {% endif %}
+            
+
+
 
             <div class="row">
+            {% if products|length != 0 %}
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
@@ -185,6 +188,9 @@
                         </div>
                     </div>
                 </div>
+                
+
+                
 
                 <!-- These loops are for adding appropriate HR for the amount of products in a row -->
                 {% if forloop.counter|divisibleby:1 %}
@@ -209,6 +215,13 @@
                 {% endif %}
 
                 {% endfor %}
+            {% else %}
+                <div class="purple-form-container text-center m-auto mt-md-5">
+                    <h5>Oh No!</h5>
+                    <h6>we don't have anything which matches that description</h6>
+                </div>
+
+            {% endif %}
             </div>
         </div>
             </div>
@@ -218,14 +231,11 @@
 
 </section>
 
-<section id="back-to-top-btn">
-    <div class="btt-button shadow-sm border border-purple">
+    <div class="btt-button shadow-sm border border-purple" id="back-to-top-btn">
     <a href="" class="btt-link d-flex h-100">
         <i class="fas fa-arrow-up text-purple mx-auto my-auto"></i>
     </a>
     </div>
-</section>
-
 
 {% endblock %}
 
@@ -233,9 +243,23 @@
 {% block postload_js %}
     {{ block.super }}
     <script type="text/javascript">
-        $('.btt-link').click(function(e) {
-            window.scrollto(0,0)
-        })
+        // This handy back to top script came from
+        // https://deepmikoto.com/coding/3--how-to-create-back-to-top-button-using-jquery-and-some-css
+        $(function () {
+            $(window).scroll(function() {
+            if ($(this).scrollTop() - 200 > 0) {
+                $('#back-to-top-btn').stop().slideDown('fast'); // show the button
+            } else {
+                $('#back-to-top-btn').stop().slideUp('fast'); // hide the button
+            }
+
+            $("#back-to-top-btn").on("click", function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 200);
+            });
+        });
+    });
     </script>
 
     <script type="text/javascript">

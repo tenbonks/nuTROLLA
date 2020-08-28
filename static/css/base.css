@@ -192,6 +192,7 @@ footer a:hover {
 }
 
 .btt-button {
+    display: none;
     height: 42px;
     width: 42px;
     position: fixed;
