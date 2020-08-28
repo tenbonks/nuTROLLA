@@ -35,7 +35,11 @@
             
             {% for cat in current_categories %}
                 {% if not current_category %}
-                <a href="{% url 'products' %}?category={{ cat.name }}{% if cat.name == 'controllers' or cat.name == 'parts'%}&console=saturn,megadrive,dreamcast,nintendo_64,gamecube,nes,snes,switch,xbox_original,xbox_360,xbox_one,playstation_1,playstation_2,playstation_3,playstation_4{% endif %}"
+                <a href="{% url 'products' %}?category={{ cat.name }}
+                         {% if cat.name == 'controllers' or cat.name == 'parts'%}&console=saturn,megadrive,dreamcast,
+                         nintendo_64,gamecube,nes,snes,switch,xbox_original,xbox_360,xbox_one,playstation_1,
+                         playstation_2,playstation_3,playstation_4
+                         {% endif %}"
                     class="category-badge text-decoration-none">
                     <span class="p-2 mt-2 badge bg-dark-sec text-magenta border border-dark">{{ cat.friendly_name }}</span>
                 </a>
@@ -58,7 +62,7 @@
                     {% endif %}
                 {% endif %}
                 {% if current_categories|length > 1 %}
-                    <a href="{% url 'products' %}?console={{ con.name }}" class="category-badge text-decoration-none">
+                    <a href="{% url 'products' %}?category=controllers,parts,tools&console={{ con.name }}" class="category-badge text-decoration-none">
                         <span class="p-2 mt-2 badge bg-dark-sec text-magenta border border-dark">{{ con.friendly_name }}</span>
                     </a>
                 {% endif %}
