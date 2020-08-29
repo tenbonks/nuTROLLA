@@ -434,4 +434,16 @@ a:hover {
         height: calc(100vh - 116px);
     }
 
+    .nav-link{
+        padding: 0.15rem;
+    };
+
+    .nav-link i.fa-lg{
+        font-size: 1rem;
+    };
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
 }
