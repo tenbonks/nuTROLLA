@@ -37,8 +37,16 @@
             <form action="{% url 'profile' %}" class="mt-3" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-purple rounded text-uppercase float-right"> Update Information</button>
-                <a class="btn btn-purple text-uppercase float-right mr-1" href="{% url 'account_change_password' %}">Change Password</a>
+                <div class="d-md-none">
+                    <button class="col-12 btn btn-purple text-uppercase text-center my-1"> Update Information</button>
+                    <hr>
+                    <a class="col-12 btn btn-purple text-uppercase text-center my-1" href="{% url 'account_change_password' %}">Change Password</a>
+                    <hr>
+                </div>
+                <div class="d-none d-md-block">
+                    <button class="btn btn-purple rounded text-uppercase float-right"> Update Information</button>
+                    <a class="btn btn-purple text-uppercase float-right mr-1" href="{% url 'account_change_password' %}">Change Password</a>
+                </div>
             </form>
         </div>
 
