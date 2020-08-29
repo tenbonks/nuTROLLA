@@ -27,7 +27,7 @@ During the development and planning of this project I took a lot of inspiration 
 **User Stories can be found under the folder "project-information" in this repo, or [here](https://github.com/tenbonks/nuTROLLA/blob/master/project_info/nuTROLLA-User_Stories.png).**
 
 
-**Mockup can be found under the folder "Mockup" in this repo, or [here](linktoimagehere#).**
+**Mockup can be found under the folder "Mockup" in this repo, or [here](https://github.com/tenbonks/nuTROLLA/tree/master/mockup).**
 
 
 there is no wireframe to show, as I adapted my wireframe into the mockup, mainly being because I was happy with the wireframe, so I started to style it.
