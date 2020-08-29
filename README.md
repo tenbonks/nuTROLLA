@@ -17,14 +17,14 @@ So feel free and have a browse, make an account, go wild!
 
 The flow of the site is designed so the user can find the type of product they want effortlessly, the three categories of the site will be presented by stylish buttons to get to what you want, the nav features all the categories which can be dropped down to filter by consoles or all of that category.
 
-The category and console is shown on each product as a link, this will get all the category of that console, so for example it will let the user browse all "Playstation 1 Controllers"
+The category and console is shown on each product as a link, this will get all the product that belong to that category and console, so for example it will let the user browse all "Playstation 1 Controllers" with the when clicking tag on the product
 
 Everything the user does, they will be notified of it with a nice little notification box, whether that be adjusting the bag, signing in or out or any errors, warnings or information.
 
-During the development and planning of this project I took a lot of inspiration and guidance of the project Boutique Ado, as I found it fit's really well with what I wanted to achieve from my site idea, so structurally there are lots of similarities
+During the development and planning of this project I took a lot of inspiration and guidance of the project Boutique Ado, as I found it fit really well with what I wanted to achieve from my site idea, so structurally there are lots of similarities, more about this in the aknowlegments at the bottom of this README
 
 
-USER STORIES, I have an external spreadsheet that will be linked here
+**User Stories can be found under the folder "project-information" in this repo, or [here](https://github.com/tenbonks/nuTROLLA/blob/master/project_info/nuTROLLA-User_Stories.png).**
 
 
 **Mockup can be found under the folder "Mockup" in this repo, or [here](linktoimagehere#).**
@@ -108,8 +108,11 @@ Sum up all the technologies used in this line
 - Heroku 
     - Where the app is deployed
 
-- ngrok 
+- [ngrok](https://ngrok.com/) 
     - An essential tool for testing webhooks when on a localmachine, as a 'https' address is required
+
+- [Figma](https://www.figma.com/)
+    - Used to create Wireframe & Mockup
 
 --- 
 # Testing
