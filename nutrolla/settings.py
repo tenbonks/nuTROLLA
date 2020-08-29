@@ -183,6 +183,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Set USE_AWS in heroku config vars
 if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
     # AWS Bucket config
     AWS_STORAGE_BUCKET_NAME = 'tenbonks-nutrolla'
     AWS_S3_REGION_NAME = 'eu-west-2'
