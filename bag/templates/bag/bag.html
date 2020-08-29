@@ -27,7 +27,51 @@
     <div class="row">
         <div class="col-12">
             {% if bag_items %}
-            <div class="table-responsive rounded">
+
+            <div class="d-block d-md-none">
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                        {% include 'bag/checkout_buttons.html' %}
+                        <p class="text-muted my-2">
+                            A summary of your bag is below
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+
+                {% for item in bag_items %}
+                    <div class="row">
+                        <div class="col-12 col-sm-6 mb-2 text-center">
+                            {% include 'bag/product_image.html' %}
+                        </div>  
+                        <div class="col-12 col-sm-6 mb-2">
+                            {% include 'bag/product_info.html' %}
+                        </div>
+                        <div class="col-12 col-sm-6 order-sm-last">
+                            <p class="my-0">Price Each: £{{ item.product.price }}</p>
+                            <p><strong>Subtotal: </strong>£{{ item.product.price  | calc_subtotal:item.quantity }}</p>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            {% include 'bag/quantity_form.html' %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <hr>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+            <div class="table-responsive rounded d-none d-md-block">
                 <table class="table table-sm table-borderless">
                     <thead class="text-black">
                         <tr>
@@ -42,24 +86,11 @@
                     {% for item in bag_items %}
                     <tr>
                         <td class="p3 w-25">
-                            {% if item.product.image %}
-                            <img src="{{ item.product.image.url }}"alt="{{ item.product.name }}" id="bag-image">
-                            {% else %}
-                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" id="bag-image">
-                            {% endif %}
-
+                            {% include 'bag/product_image.html' %}
                         </td>
                         
                         <td class="py-3">
-                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="my-0 small text-muted"><strong>SKU: {{ item.product.sku|upper }}</strong></p>
-                            
-                            {% if item.product.stock <= 10 %}
-                                <p class="my-0 small text-danger"><strong>Only {{ item.product.stock }} left</strong></p>
-                            {% else %}
-                                <p class="my-0 small text-muted"><strong>{{ item.product.stock }} in stock</strong></p>
-                            {% endif %}
-                            
+                            {% include 'bag/product_info.html' %}
                         </td>
                         
                         <td class="py-3">
@@ -67,41 +98,7 @@
                         </td>
                         
                         <td class="py-3 w-25">
-                            <form action="{% url 'adjust_bag' item.item_id %}" method="POST" class="form update-form">
-                                {% csrf_token %}
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-sm btn-purple rounded-0"
-                                                data-item_id="{{ item.item_id}}" id="decrement-qty_{{ item.item_id }}">
-                                                <span>
-                                                    <i class="fas fa-minus fa-sm"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-
-                                        <input class="form-control form-control-sm qty_input" type="number" name="quantity" value="{{ item.quantity }}"
-                                            min="1"
-                                            max="{% if item.product.stock <= 99 %}{{ item.product.stock }}{% else %}99{% endif %}"
-                                            data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-sm btn-purple rounded-0"
-                                                data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                <span>
-                                                    <i class="fas fa-plus fa-sm"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    
-                                    </div>
-                                </div>
-                            </form>
-
-                            <a class="update-link text-info"><small>Update</small></a>
-                            <a class="remove-link text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
-
+                            {% include 'bag/quantity_form.html' %}
                         </td>
                         
                         <td class="py-3">
@@ -118,19 +115,7 @@
 
                     <tr>
                         <td colspan="5" class="text-right">
-                            <a href="{% url 'products' %}?category=controllers,parts,tools"
-                                class="btn btn-outline-purple rounded btn-lg">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Shopping</span>
-                            </a>
-                            <a href="{% url 'checkout' %}" class="btn btn-purple btn-lg">
-                                <span class="text-uppercase">Secure Checkout</span>
-                                <span class="icon">
-                                    <i class="fas fa-lock"></i>
-                                </span>
-                            </a>
+                            {% include 'bag/checkout_buttons.html' %}
                         </td>
                     </tr>
                 </table>
@@ -154,6 +139,12 @@
         </div>
     </div>
 
+</div>
+
+<div class="btt-button shadow-sm border border-purple" id="back-to-top-btn">
+    <a href="" class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up text-purple mx-auto my-auto"></i>
+    </a>
 </div>
 
 {% endblock %}
@@ -181,6 +172,27 @@
                 location.reload();
             })
     })
+</script>
+
+<script type="text/javascript">
+    // This handy back to top script came from
+    // https://deepmikoto.com/coding/3--how-to-create-back-to-top-button-using-jquery-and-some-css
+    // This code is also in the products app
+    $(function () {
+        $(window).scroll(function() {
+        if ($(this).scrollTop() - 200 > 0) {
+            $('#back-to-top-btn').stop().slideDown('fast'); // show the button
+        } else {
+            $('#back-to-top-btn').stop().slideUp('fast'); // hide the button
+        }
+
+        $("#back-to-top-btn").on("click", function () {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 200);
+        });
+    });
+});
 </script>
 
 {% endblock %}
