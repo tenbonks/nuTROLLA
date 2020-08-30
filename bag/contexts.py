@@ -1,7 +1,5 @@
 from django.shortcuts import get_object_or_404
 from products.models import Product
-from django.contrib import messages
-from .views import remove_from_bag
 
 
 def bag_contents(request):
@@ -11,44 +9,18 @@ def bag_contents(request):
     product_count = 0
     bag = request.session.get('bag', {})
 
-    items_to_remove = []
-
     for item_id, quantity in bag.items():
         product = get_object_or_404(Product, pk=item_id)
 
-        if quantity < product.stock:
-            total += quantity * product.price
-            product_count += quantity
+        total += quantity * product.price
+        product_count += quantity
+        bag_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'product': product,
+        })
 
-            bag_items.append({
-                'item_id': item_id,
-                'quantity': quantity,
-                'product': product,
-            })
-
-        else:
-            total += product.stock * product.price
-            product_count += product.stock
-            # bag[item_id] += product.stock
-            if product.stock != 0:
-                bag_items.append({
-                    'item_id': item_id,
-                    'quantity': product.stock,
-                    'product': product,
-                })
-
-            else:
-                messages.error(request,
-                               f'{product.name} is now out of stock. \
-                               It has been removed from your bag')
-                items_to_remove.append(item_id)
-
-    for item_id in items_to_remove:
-        if item_id:
-            remove_from_bag(request, item_id, no_stock=True)
     grand_total = total
-
-    # request.session['bag'] = bag
 
     context = {
         'bag_items': bag_items,
