@@ -70,6 +70,7 @@ there is no wireframe to show, as I adapted my wireframe into the mockup, mainly
 This feature was a tricky one, as without stripe, I found it quite straight forward to implement, but I had issues with if stock were  to change between page loads. An example is if a product goes out of stock, and a user checks out with it in their bag just after, the payment would be proccessed by stripe and the user charged for items that are out of stock.
 I spent a fair amount of trial and error on this and in the end decided to take out the code that ammended stock levels, and the sections that would return a user back to the bag page and notify them of the stock issue.
 
+
 NOTE: I ended up implementing this feature so it has no effect on stock issues during checkout, it is purely visual element of the site. there are some visual bugs as a drawback though, for example a user can have an item which shows out of stock if they already had it in their bag before the stock ran out. This isn't ideal but since I had stock in the model I wanted to use it for something.
 </details>
 
@@ -158,7 +159,7 @@ I sent out the app to the peer-review channel on slack, In which I had one respo
 
 I performed all the manual tests below once my website was in a production environment and I felt was ready for submission
 
-<details><summary>CLICK HERE for testing process'</summary>
+<details><summary>CLICK HERE for testing processes</summary>
 <p>
 
 1. The content of the site should resize fluidly to specific breakpoints
@@ -202,6 +203,8 @@ test 2-6 follow on from test 2
     3. A notification shows me that the quantity has changed to 5
     4. This is what I expected as 2 + 3 = 5
     5. this confirms this is functioning as expected
+
+There is a bug with the quantity selector in the bag page, but even if a user tries to add more than what the product stock is, it will alert them that they have all available stock in their bag and set the quantity in the bag to the products stock level
 
 </p>
 </details>
@@ -386,7 +389,7 @@ After the app was deployed, I also logged into stripe, and added a new enpoint f
 
 **If you want to run *nuTROLLA* locally, you can clone this repository into an editor of your choice**
 
-* Paste this into the editors terminal - <code>git clone https://github.com/tenbonks/scriptio-qoutes-app.git</code>
+* Paste this into the editors terminal - <code>git clone https://github.com/tenbonks/nuTROLLA.git</code>
 
 - To install libraries for Python, create a virtual environment(for local machines), and use this code -  <code>pip install -r requirements.txt</code>
 
