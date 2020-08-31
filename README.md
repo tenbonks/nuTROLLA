@@ -91,6 +91,8 @@ The tags I currently use work, but I want to implement them in a cleaner way as 
 - Route any unkown URL with the prefix "tenbonks-nutrolla.herokuapp.com" to the apps homepage (404 errors)
 
 - I had planned on implementing using allauths social account login, so users would be able to create an account via their google account
+
+- I would of liked for the placeholders on all forms have a floating label, so the placeholder is the label, and when a value is entered the placeholder floats above the input text, which it does by standard in [Materialize](https://materializecss.com/), but I found it quite hard to implement when using cripsy forms
   
 All of these were mainly not imlemented due to time contraints.
 
