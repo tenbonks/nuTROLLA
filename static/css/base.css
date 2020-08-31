@@ -298,7 +298,6 @@ input[name='q']::placeholder {
 
 
 .allauth-form-inner_content a {
-    margin-top: 1.5;
     color: #791E94 !important;
 }
 
@@ -312,7 +311,6 @@ p {
 .allauth-form-inner_content
 .purple-form-container
 a {
-    margin-top: 1.5;
     color: #F6019D !important;
 }
 
@@ -325,7 +323,7 @@ a:hover {
 .allauth-form-inner_content
 .purple-form-container
 .btn-outline-purple {
-    margin-top: 1.5;
+    margin-top: .5rem;
     color: #791E94 !important;
 }
 
@@ -354,6 +352,7 @@ a:hover {
 .allauth-form-inner_content button,
 .allauth-form-inner_content input[type="submit"] {
     /* style taken and adapted from bootstrap "btn" class */
+    margin-top: .5rem;
     display: inline-block;
     font-weight: 400;
     color: #fff !important;
@@ -436,11 +435,11 @@ a:hover {
 
     .nav-link{
         padding: 0.15rem;
-    };
+    }
 
     .nav-link i.fa-lg{
         font-size: 1rem;
-    };
+    }
 
     .navbar-toggler {
         padding: .6rem .6rem;

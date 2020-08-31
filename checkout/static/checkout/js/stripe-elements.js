@@ -33,7 +33,7 @@ var card = elements.create('card', {
   style: style
 });
 
-card.mount('#card-element')
+card.mount('#card-element');
 
 //  Handle realtime validiation errors on the card element
 card.addEventListener('change', function (event) {
@@ -44,7 +44,7 @@ card.addEventListener('change', function (event) {
         <i class="fas fa-times"></i>
       </span>
       <span>${event.error.message}</span>
-      `
+      `;
 
     $(errorDiv).html(html);
   } else {
@@ -78,7 +78,7 @@ form.addEventListener('submit', function (ev) {
     'csrfmiddlewaretoken': csrfToken,
     'client_secret': clientSecret,
     'save_info': saveInfo,
-  }
+  };
   var url = '/checkout/cache_checkout_data/';
 
   // post the captured form data to the cache_checkout_data view
@@ -144,7 +144,7 @@ form.addEventListener('submit', function (ev) {
     // If there is an error posting to the view, just reload page
     // error will be shown in django messages
     location.reload();
-  })
+  });
 
 
 });

@@ -9,21 +9,21 @@
         
         $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
         $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
-    };
+    }
 
     // Check all inputs on page load, ensures proper enabling/disabling
     var allQtyInputs = $('.qty_input');
     for(var i = 0; i < allQtyInputs.length; i++){
         var itemId = $(allQtyInputs[i]).data('item_id');
         var stockLevel = $(allQtyInputs[i]).attr('max');
-        handleEnableDisable(itemId, stockLevel)
+        handleEnableDisable(itemId, stockLevel);
     }
 
     // Check enable/disable everytime the input is changed
     $('.qty_input').change(function() {
         var itemId = $(this).data('item_id');
         handleEnableDisable(itemId);
-    })
+    });
 
     // Increment qty by 1 when plus button is pressed
     $('.increment-qty').click(function(e) {
@@ -33,7 +33,7 @@
         var currentValue = parseInt($(closestInput).val());
         $(closestInput).val(currentValue + 1);
         var itemId = $(this).data('item_id');
-        handleEnableDisable(itemId, stockLevel)
+        handleEnableDisable(itemId, stockLevel);
     });
 
     //  Decrement the qty by 1 when the minus button is pressed
@@ -44,6 +44,6 @@
         var currentValue = parseInt($(closestInput).val());
         $(closestInput).val(currentValue - 1);
         var itemId = $(this).data('item_id');
-        handleEnableDisable(itemId, stockLevel)
+        handleEnableDisable(itemId, stockLevel);
     });
 </script>
