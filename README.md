@@ -199,7 +199,7 @@ test 2-6 follow on from test 2
 
 6. If I click "Update" in the product description page with the item currently in my basket, The quantity is added to the existing amount
     1. The selected item already has the quantity of 2 in my bag,
-    2. On the product detail page I change the quantity to 2 and click "Add to Bag"
+    2. On the product detail page I change the quantity to 3 and click "Add to Bag"
     3. A notification shows me that the quantity has changed to 5
     4. This is what I expected as 2 + 3 = 5
     5. this confirms this is functioning as expected
