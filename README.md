@@ -15,7 +15,7 @@ So feel free and have a browse, make an account, add item's to your basket, go w
 
 # UX
 
-The flow of this site is designed to be nothing out of the ordianry when it comes to e-commerce sites, with all the products easily findable, be that from searching the store via the search bar or using the navigation links to get to the products they want.
+The flow of this site is designed to be nothing out of the ordinary when it comes to e-commerce sites, with all the products easily findable, be that from searching the store via the search bar or using the navigation links to get to the products they want.
 
 If the user wishes to buy something from the site, its a very simple process, and the user is given inputs to change the quantity of the item within the bag incase they change their mind on something.
 
@@ -23,7 +23,7 @@ A user can sign up, and keep an account for extra access to the site, these feat
 
 The links shown to users will depend on if their logged in or not, so there are no links a user shouldn't be pressing, and there is authorisation checks on pages where users shouldn't be visiting, such as if a user who isn't signed in tries to access the profile app, they will be redirected to login, and if a user who is logged in, tries to access pages regarding product management, they will be notified that they aren't authorised.
 
-The colours used for the site are inspired from "Vapourwave/Synthwave/Cyberpunk" themes, these correlate with gaming and pluck on the nostalgia strings, and really make the site stand out from other sites in the "Controller Refurbishment" business. The site reflows all the way down to 320px and looks just as good in mobile, as it does in desktop.
+The colours used for the site are inspired from "Vapourwave/Synthwave/Cyberpunk" themes, these correlate with gaming and pluck on the nostalgia strings, and really make the site stand out from other sites in the "Controller Refurbishment" business. The site reflows all the way down to 320px and looks just as good in mobile, as it does in desktop. To see the exact colour sheet I referenced, click [HERE](https://github.com/tenbonks/nuTROLLA/blob/master/project_info/cyber-punk-color-pallate.png)
 
 During the development and planning of this project I took a lot of inspiration and guidance of the project Boutique Ado, as I found it fit really well with what I wanted to achieve from my site idea, so structurally there are lots of similarities, more about this in the aknowlegments at the bottom of this README
 
@@ -69,6 +69,8 @@ there is no wireframe to show, as I adapted my wireframe into the mockup, mainly
 <br>
 This feature was a tricky one, as without stripe, I found it quite straight forward to implement, but I had issues with if stock were  to change between page loads. An example is if a product goes out of stock, and a user checks out with it in their bag just after, the payment would be proccessed by stripe and the user charged for items that are out of stock.
 I spent a fair amount of trial and error on this and in the end decided to take out the code that ammended stock levels, and the sections that would return a user back to the bag page and notify them of the stock issue.
+
+NOTE: I ended up implementing this feature so it has no effect on stock issues during checkout, it is purely visual element of the site. there are some visual bugs as a drawback though, for example a user can have an item which shows out of stock if they already had it in their bag before the stock ran out. This isn't ideal but since I had stock in the model I wanted to use it for something.
 </details>
 
 <details>
@@ -81,7 +83,9 @@ The tags I currently use work, but I want to implement them in a cleaner way as 
 
 - Write programmatic test's with Django's testing functions, I ended up doing manual testing after, and througout development, more on this in the testing section of this README
 
-- I had planned on filling out the footer wit typical information found on a e-commerce site, this would include T&C's, Returns, and a contact form which I was going to implement with a bootstrap modal
+- Write more manual tests
+
+- I had planned on filling out the footer with typical information found on a e-commerce site, this would include T&C's, Returns, and a contact form which I was going to implement with a bootstrap modal
 
 - Route any unkown URL with the prefix "tenbonks-nutrolla.herokuapp.com" to the apps homepage (404 errors)
 
@@ -116,6 +120,9 @@ For getting the initial data to start working on my site I manually every file i
 
 - [Django](https://www.djangoproject.com/) 
     - The framework with batteries included, this handles one heck of a lot on this website, from which url does what and defining what that does in the views, it's the foundation to this site and made making something of this size a lot quicker.
+
+- [django-crispyforms](https://django-crispy-forms.readthedocs.io/en/latest/index.html) 
+    - Allows Django forms to be styled and formatted with ease, I used it to format forms using Bootstrap 4 classes
 
 - [Bootstrap 4](https://getbootstrap.com/) 
     - Makes styling the site a breeze with it's components, easy classes and a simple grid layout.
@@ -401,8 +408,18 @@ The JSON fixture files were created by me, the product images used are accredite
 **Media**
 
 
+- Product images that are Tools
+    - Zacro 12pc, Open and Clean Kit | [Image URL](https://images-na.ssl-images-amazon.com/images/I/715iPtffiFL._AC_SL1000_.jpg) | [Amazon Page](https://www.amazon.co.uk/Magnetic-Phillips-Screwdriver-Storage-Controller/dp/B07FL1P3J8/ref=sr_1_6?crid=2I8PECKHA39F1&dchild=1&keywords=ps4+controller+screwdriver&qid=1598663627&sprefix=PS4+CONTROLLER+SCRE%2Caps%2C151&sr=8-6)
+    - Alcohol Wipes | [Image URL](https://images-na.ssl-images-amazon.com/images/I/71V8pE%2BD04L._AC_SL1500_.jpg) | [Amazon Page](https://www.amazon.co.uk/OptiPro-Alcohol-Pre-Injection-Isopropyl-Wipes/dp/B08CL34XS7/ref=sr_1_8?crid=EBK5WIBE9F6E&dchild=1&keywords=alcohol+wipes&qid=1598667504&sprefix=alcohol+%2Caps%2C158&sr=8-8)
+    - Tweezers 9pc | [Image URL](https://images-na.ssl-images-amazon.com/images/I/619tkWBMvkL._AC_SL1200_.jpg) | [Amazon Page](https://www.amazon.co.uk/PIXNOR-Precision-Anti-Static-Electronics-Laboratory/dp/B01MYBI01J/ref=sr_1_8?dchild=1&keywords=electronics+tweezers&qid=1598667717&sr=8-8)
 
-Product images were acquired from a dataset called [controllers](https://www.kaggle.com/charcoal/controllers) in Kaggle, by [Aaron Styles](https://www.kaggle.com/charcoal)
+- Product images that are Parts, all of these came from [Zedlabz](https://www.zedlabz.com/)
+    - PS4 TRIGGERS | [Image URL](https://cdn.shopify.com/s/files/1/1810/1427/products/cd2j5opopc0_2048x2048.jpg?v=1582125020)
+    - PS4 CONDUCTION PAD | [Image URL](https://cdn.shopify.com/s/files/1/1810/1427/products/1jyna1p3as5_2048x.gif?v=1582132455)
+    - PS4 JOYSTICKS | [Image URL](https://cdn.shopify.com/s/files/1/1810/1427/products/qvbz5ht05wu_2048x2048.jpg?v=1582131570)
+    - PS4 ALL WHITE BUTTON KIT | [Image URL](https://cdn.shopify.com/s/files/1/1810/1427/products/reh2hry4mqt_2048x.jpg?v=1582132369)
+
+Product images which are controllers were acquired from a dataset called [controllers](https://www.kaggle.com/charcoal/controllers) in Kaggle, by [Aaron Styles](https://www.kaggle.com/charcoal)
 
 The Synthwave image I used for the background of the homepage is from [WallpaperAccess](https://wallpaperaccess.com/synthwave)
 
@@ -414,5 +431,6 @@ no image icon is from [Flaticon/Freepik](Icons made by <a href="https://www.flat
 
 During this development I took a heavy amount of inspiration and guidance from the mini project featured in the learning material to learn about how to make production ready Django project, the planning and development were all aided by this project, the creator of the project is [ckz8780 Chris Z](https://github.com/ckz8780), a link to the project he made for Code Institute, [Botique Ado](https://github.com/ckz8780/boutique_ado_v1).
 
+Code Institute Tutors for their valuable opinions during development
 
 My mentor, Maranatha Ilesanmi for valuable sessions during key points of development 
