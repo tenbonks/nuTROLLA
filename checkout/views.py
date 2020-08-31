@@ -77,6 +77,17 @@ def checkout(request):
 
                     order_line_item.save()
 
+                    ammended_stock_level = product.stock - item_data
+
+                    # The code below is a workaround for my stock system
+                    # A stock needs to be a positive int
+                    if ammended_stock_level <= 0:
+                        product.stock = 0
+                    else:
+                        product.stock = ammended_stock_level
+
+                    product.save()
+
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag\
