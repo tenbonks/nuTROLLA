@@ -93,6 +93,8 @@ The tags I currently use work, but I want to implement them in a cleaner way as 
 - I had planned on implementing using allauths social account login, so users would be able to create an account via their google account
 
 - I would of liked for the placeholders on all forms have a floating label, so the placeholder is the label, and when a value is entered the placeholder floats above the input text, which it does by standard in [Materialize](https://materializecss.com/), but I found it quite hard to implement when using cripsy forms
+
+- I tried to get the buttons on the homescreen in the mobile view to have less of a gap vertically but they were quite annoying get this to happen, so I've left them as they are, it's not a massive deal, it would just look a bit nicer with less margin between them.
   
 All of these were mainly not imlemented due to time contraints.
 
