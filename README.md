@@ -52,7 +52,7 @@ there is no wireframe to show, as I adapted my wireframe into the mockup, mainly
 
 - A vibrant design featuring Synthwave/Cyberpunk colours, and a neon light effect shining down on the page
 
-- Full CRUD (Create, Remove, Update, and Delete) operations on product database for admin of the site
+- A product management page for Admin, to add and edit items on the site
 
 - A user can sign up and have a profile, allowing them to save default information to use when checking out
 
@@ -269,7 +269,7 @@ There is a bug with the quantity selector in the bag page, but even if a user tr
 </p>
 </details>
 
-<details><summary>CHEKOUT TESTS</summary>
+<details><summary>CHECKOUT TESTS</summary>
 <p>
 
 Checkout requires an item to be in the basket already, this function has been tested, if a user tries to go to the checkout page with nothing in basket they are redirected to the homepage, so all these test are performed when there is 1 item in the bag
@@ -304,6 +304,84 @@ Checkout requires an item to be in the basket already, this function has been te
     3. I look for the order number I was given in the checkout success page
     4. I confirm the details are correct
     5. This verifies it is functioning as expected
+
+</p>
+</details>
+
+<details><summary>PRODUCT TESTS</summary>
+<p>
+
+1. If I search "Playstation" in the searchbar of any page, I expect to be returned a list of Playstation products
+    1. From the Home Page, click the searchbar in the nav, and type in "playstation"
+    2. I press enter, and am returned with products with "playstation" in the name or description
+    3. I added "stressball" to a playstation controllers description, and searched the store for "stressball"
+    4. The product with stressball in the description is returned
+    5. I removed "stressball" from the description
+    6. This comfirms this is functioning as expected
+
+2. If I click Controllers > Xbox, I expect to be returned a list of Xbox Controllers
+    1. I click the main nav button for Controllers, then Xbox, I am redirected to the products page
+    2. I confirm all the products belong to that console and category
+    3. This verifies it is working as expected
+
+3. If no products are returned, I expect a notification telling me so
+    1. I search for "uiooiu" and press enter
+    2. I am redirected to the product page, and notified "There are no products matching that description"
+    3. This verifies it is working as expected
+
+4. If an items stock is 0, I expect it to be shown as out of stock
+    1. On the product page, I click edit on a product
+    2. I change the stock field to 0
+    3. I submit the form and am redirected to the product detail
+    4. The item is showing as out of stock, and the add to basket button is deactivated
+    5. This confirms this function is working as expected
+
+</p>
+</details>
+
+<details><summary>PRODUCT ADMIN TESTS</summary>
+<p>
+
+1. If I am a superuser, I expect to be able to access the product admin page
+    1. Log into site as a user with superuser status
+    2. Click the account icon
+    3. A form is presented with all the product model fields
+    4. This verifies authorisation is working for site admin
+
+2. If I submit a unvalid product form, I expect an error
+    1. Fill out the form with a blank required field
+    2. Submit the form
+    3. Form is not submitted and notifies me of the error
+    4. I try again with the price field set at "1234567.12
+    5. Form is not submitted due to price being over 6 figures
+    6. I try again with the price field set at "123.1223
+    7. Form is not submitted due to decimal fields being over 2 figures
+    8. Fill the form out so it's valid, submit it
+    9. I am redirected to the products page and all fields are filled in correctly
+    10. This verified this is working as expected
+
+3. If I submit a valid product form, I expect to be redirected to the products detail page that I just added
+    1. Fill the product form out so it is valid
+    2. Submit the product form
+    3. I am redirected to the product detail page of the added product
+    4. This verifies this is working as expected
+
+4. If I click on edit on any product, I expect to be redirected to the edit product form, with the field prefilled from the item selected
+    1. On the all products page, click edit on a product
+    2. I am redirected to the edit product page, with the fields prefilled from the selected product
+    3. I try this again with the same product, but from within the product detail page
+    4. I am redirected to the edit product page, with the fields prefilled from the selected product
+    5. This verifies this is working as expected
+
+5. If I remove an image from within the edit product form, I expect the image to be removed from the product
+    1. Create a test product with a test image
+    2. search for the test products name in the search bar
+    3. click edit on the test product
+    4. click Clear Image
+    5. Submit the form
+    6. I am redirected to the product details page of the edited product
+    7. The image has been removed from the listing
+    8. This confirms that it is working as expected
 
 </p>
 </details>
