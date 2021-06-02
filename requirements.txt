@@ -31,5 +31,5 @@ s3transfer==0.3.3
 six==1.15.0
 sqlparse==0.3.1
 stripe==2.50.0
-urllib3==1.25.10
+urllib3==1.26.5
 zipp==3.1.0
